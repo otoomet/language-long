@@ -17,10 +17,12 @@
 \usepackage[utf8]{inputenc}
 \usepackage{natbib}
 \usepackage{setspace}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{xspace}
 \input{isomath}
 
-\newcommand{\debug}[1]{\marginpar{\small\raggedright\begin{spacing}{1} #1
+\newcommand{\debug}[1]{\marginpar{\small\raggedright\begin{spacing}{1}
+      \color{BrickRed} #1
 \end{spacing}
 }}
 \newenvironment{response}
@@ -52,7 +54,7 @@ references to 50 items.
 
 
 \begin{enumerate}
-\item 1. The paper aims to contribute to an already large
+\item The paper aims to contribute to an already large
   literature. The recent literature in this field focus on the
   identification of causal effects by using instrumental variable
   approaches (see, e.g., Isphording et al., 2014; Yao and van Ours,
@@ -66,7 +68,16 @@ references to 50 items.
   on natives’ language skills the paper distinguished itself form
   large parts of the literature and adds some new results to our
   knowledge on the labour market effects of language skills.
-\item My main concern is with some of their wage results. I find it
+
+  \begin{response}
+    No response needed here.
+  \end{response}
+\item 
+  \debug{OT: should refer to Toomet (2011), maybe there are more
+    papers.  The effect is mainly coming from Tallinn and somewhat
+    from education too, either do a table that disentangles these, or
+    a plot (violin plot?) by group.}
+  My main concern is with some of their wage results. I find it
   puzzling that they don’t find a wage premium for Russian men who
   have Estonian language skills as they do find a sizeable significant
   effect of about 11 to 17 percent for Russian women and a significant
@@ -80,7 +91,10 @@ references to 50 items.
   401.59). The authors should either provide more statistics on this
   result (if possible) or a more detailed discussion on potential
   reasons that lead to this finding.
-\item The paper needs to be checked for spelling and grammar
+\item
+  \debug{OT: I'll do a rewrite after changes are made, hope it's
+    sufficient.} 
+  The paper needs to be checked for spelling and grammar
   errors. There are a number of typos and errors, which should be
   corrected in a revision. This would normally be a minor comment, but
   here the authors should take this comment very serious as there are
@@ -105,7 +119,10 @@ you write that inactivity is one of the included labour market
 outcomes. Please clarify this and be clear in your description of what
 is included in your sample.
 \item 
-- The sample size for different specification of the same analysis
+  \debug{ot: let's make it equal (i.e. remove all observations with
+    any of the variables missing.  Add a footnote that when we
+    included all the variables, we still got the same results.}
+  The sample size for different specification of the same analysis
 should be the equal. Otherwise it is difficult to conclude whether the
 changes in the coefficients are coming from the addition of more
 controls or form the change in the size of the estimation sample.
@@ -159,7 +176,9 @@ being unemployed is reduced.
   one of the extensions that this paper is making the inclusion of
   women and namely how their effects differ from males and previous
   literature. 
-\item In the Discussion and Concluding Remarks section they state that
+\item 
+\debug{OT: seems like I have to address this.}
+In the Discussion and Concluding Remarks section they state that
   “The lower end labour market, associated with frequent unemployment,
   is better integrated and those who are fluent in the language may
   expect both less unemployment and higher wage. However, men at
