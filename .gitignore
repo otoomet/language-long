@@ -1,3 +1,5 @@
 # latex crap
 *.aux
 
+# temp folders
+auto/
