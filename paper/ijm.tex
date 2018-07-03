@@ -519,10 +519,10 @@ We estimate the basic model in the following form:
 	\label{eq:specification}
 	\begin{split}
 		y_{it} ^{g} = &\: 
-		\\alpha_{g}{}' X_{it}^{g}+
+		\\alpha^{g}{}' X_{it}^{g}+
 		\\& + \vec{beta}^{g}{}' \cdot \vec{L}_{it}^{g} +
 		\eta_{i}^{g} +
-		\upsilon_t^{g} + \epsilon_{it}^{g},
+		\upsilon_{t}^{g} + \epsilon_{it}^{g},
 	\end{split}
 \end{equation}
 where $y_{it}^{g}$ is the outcome (either unemployment indicator
@@ -546,8 +546,8 @@ replace the main language effects in~\eqref{eq:specification} by the
 We estimate three models that differ in terms of the number of
 control variables. The first one only includes the language skills
 and year dummies. The second one also includes individual
-characteristics, such as age, education, and county of residence.
-Finally, the third model also includes industry, occupation, and other
+characteristics (age, education) and family descriptors (marital status, having kids up to 17 years old) and county of residence.
+Finally, the third model additionally includes industry, occupation, and other
 workplace descriptors.
 
 \section{Results}
