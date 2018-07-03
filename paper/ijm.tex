@@ -25,7 +25,9 @@
 \usepackage{graphicx}
 \usepackage{epstopdf}
  
- \usepackage[author=, status=draft]{fixme}
+ \usepackage[author=, status=final]{fixme}
+  \usepackage[final]{changes} %Manually track changes
+ \definechangesauthor{SKB}
 \usepackage{longtable}
 \usepackage{paralist}
 \usepackage{rotating}
@@ -57,6 +59,15 @@
 \def\legendTwo{\multicolumn{3}{l}{\footnotesize{Significance levels
 			:\hspace{1em} $\dag$ : 10\% \hspace{1em}
 			$\ast$ : 5\% \hspace{1em} $\ast\ast$ : 1\% \normalsize}}}
+%SKB: Added for documenting the tables and figures
+\newcommand{\modelTwo}{age, age\textsuperscript{2}, education, being married, number of children, inter-ethnic household}
+\newcommand{\modelThree}{\modelTwo, industry, occupation ,ownership type of company, number of workers in company, working in the public sector, experience in company}
+\newcommand{\modelThreeAdd}{industry, occupation ,ownership type of company, number of workers in company, working in the public sector, experience in company}	
+\newcommand{\restrictions}{The sample period is from year 2000 to year 2012. Sample is limited to persons
+	25-55 year old.}
+\newcommand{\agerestrictions}{Sample is limited to persons
+	25-55 year old.}
+%Modified section numbering	
 \renewcommand{\thesection}{\arabic{section}.}
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}.}
 
@@ -518,9 +529,7 @@ We estimate the basic model in the following form:
 \begin{equation}
 	\label{eq:specification}
 	\begin{split}
-		y_{it} ^{g} = &\: 
-		\\alpha^{g}{}' X_{it}^{g}+
-		\\& + \vec{beta}^{g}{}' \cdot \vec{L}_{it}^{g} +
+		y_{it} ^{g} = &\: alpha^{g}{}' X_{it}^{g} + \vec{beta}^{g}{}' \cdot \vec{L}_{it}^{g} +
 		\eta_{i}^{g} +
 		\upsilon_{t}^{g} + \epsilon_{it}^{g},
 	\end{split}
@@ -534,7 +543,7 @@ is the idiosyncratic error term. We denote the groups g by E (Estonian) and R (R
 As we use panel data, we cluster the
 standard errors on individuals.  When analysing the time trend, we
 replace the main language effects in~\eqref{eq:specification} by the
-\fxnote*{Did we estimate it really that way? At least not in my code.}{corresponding interactions}
+\fxnote*{Did we estimate it really that way? At least not in my code. I found the code for estimations with these interactions, but I don't remember that I used these interactions for the tables.}{corresponding interactions}
 \begin{align}
 	\label{eq:time_interaction}
 	\beta_{RUS,t} \cdot RUS_{it} \cdot \upsilon_{t} +
@@ -549,6 +558,21 @@ and year dummies. The second one also includes individual
 characteristics (age, education) and family descriptors (marital status, having kids up to 17 years old) and county of residence.
 Finally, the third model additionally includes industry, occupation, and other
 workplace descriptors.
+\Cref{tab:models} summarises this description of the models.
+%SKB: This table should have been in the article at some point, but I must have removed it. I use in my Quantile Regression article
+\begin{table}[hbtp]
+	\centering
+	\caption{Groups of explanatory variables included in different models}
+	\label{tab:models}
+	\begin{tabular}{r|ccc}
+		\toprule
+		& Model 1 & Model 2 & Model 3 \\ \midrule
+		year dummies       & \V      & \V      & \V      \\
+		indiv. charact.    &         & \V      & \V      \\
+		workplace charact. &         &         & \V      \\ 
+		\bottomrule
+	\end{tabular}
+\end{table}
 
 \section{Results}
 \label{sec:results}
@@ -578,21 +602,21 @@ virtually unchanged while for women the estimate falls by 30\%.
 			                & (0.006)                    & (0.006)                            & (0.005)                    & (0.005)                    \\
 			English         & -0.047^{***}               & -0.019^{***}                       & -0.024^{***}               & -0.008^{*}                 \\
 			                & (0.004)                    & (0.005)                            & (0.004)                    & (0.004)                    \\
-			\# obs          & \multicolumn{1}{c}{36,160} & \multicolumn{1}{l}{36,132}         & \multicolumn{1}{l}{36,050} & \multicolumn{1}{c}{36,015} \\
+			\# observations          & \multicolumn{1}{c}{36,160} & \multicolumn{1}{l}{36,132}         & \multicolumn{1}{l}{36,050} & \multicolumn{1}{c}{36,015} \\
 			$R^{2}$         & 0.022                      & 0.047                              & 0.012                      & 0.036                      \\ \hline
 			Russians: & \\
 			Estonian        & -0.052^{***}               & -0.052^{***}                       & -0.065^{***}               & -0.045^{***}               \\
 			                & (0.010)                    & (0.011)                            & (0.009)                    & (0.010)                    \\
 			English         & -0.020                     & 0.006                              & -0.015                     & -0.003                     \\
 			                & (0.012)                    & (0.014)                            & (0.011)                    & (0.012)                    \\
-			\# obs          & \multicolumn{1}{c}{12,946} & \multicolumn{1}{l}{12,942}         & \multicolumn{1}{l}{13,689} & \multicolumn{1}{c}{13,674} \\
+			\# observations          & \multicolumn{1}{c}{12,946} & \multicolumn{1}{l}{12,942}         & \multicolumn{1}{l}{13,689} & \multicolumn{1}{c}{13,674} \\
 			$R^{2}$         & 0.033                      & 0.066                              & 0.023                      & 0.043                      \\ \hline
 			year dummies    & \V                         & \V                                 & \V                         & \V                         \\
 			indiv. charact. &                            & \V                                 &                            & \V                         \\
 			\bottomrule
 		\end{tabular}%
 		\begin{flushleft}
-			\caption*{ \legend \\ Standard errors (clustered on individuals) in parentheses.}
+			\caption*{ \legend \\ Standard errors (clustered on individuals) in parentheses.\\  Individual characteristics are \modelTwo. \\ \restrictions}
 		\end{flushleft}
 	\end{center}
 
@@ -653,21 +677,21 @@ influence the estimates.
 			                   & (0.015)                    & (0.015)                    & (0.014)                            & (0.011)                    & (0.011)                    & (0.010)                    \\
 			English            & 0.343^{***}                & 0.162^{***}                & 0.145^{***}                        & 0.311^{***}                & 0.131^{***}                & 0.123^{***}                \\
 			                   & (0.013)                    & (0.015)                    & (0.013)                            & (0.010)                    & (0.010)                    & (0.010)                    \\
-			\# obs             & \multicolumn{1}{l}{22,290} & \multicolumn{1}{l}{21,785} & \multicolumn{1}{l}{22,274}         & \multicolumn{1}{l}{26,673} & \multicolumn{1}{l}{26,449} & \multicolumn{1}{c}{26,644} \\
+			\# observations             & \multicolumn{1}{l}{22,290} & \multicolumn{1}{l}{22,274} & \multicolumn{1}{l}{21,785}         & \multicolumn{1}{l}{26,673} & \multicolumn{1}{l}{26,644} & \multicolumn{1}{c}{26,449} \\
 			$R^{2}$            & 0.726                      & 0.755                      & 0.790                              & 0.769                      & 0.810                      & 0.830                      \\ \midrule
 			Russians:          &  \\
 			Estonian           & 0.018                      & -0.014                     & 0.008                              & 0.167^{***}                & 0.114^{***}                & 0.125^{***}                \\
 			                   & (0.018)                    & (0.019)                    & (0.018)                            & (0.014)                    & (0.014)                    & (0.014)                    \\
 			English            & 0.249^{***}                & 0.155^{***}                & 0.137^{***}                        & 0.223^{***}                & 0.089^{***}                & 0.089^{***}                \\
 			                   & (0.026)                    & (0.027)                    & (0.026)                            & (0.021)                    & (0.022)                    & (0.020)                    \\
-			\# obs             & \multicolumn{1}{l}{8234}   & \multicolumn{1}{l}{7978}   & \multicolumn{1}{l}{8233}           & \multicolumn{1}{l}{9904}   & \multicolumn{1}{l}{9697}   & \multicolumn{1}{c}{9895}   \\
+			\# observations             & \multicolumn{1}{l}{8234}   & \multicolumn{1}{l}{8233}   & \multicolumn{1}{l}{7978}           & \multicolumn{1}{l}{9904}   & \multicolumn{1}{l}{9895}   & \multicolumn{1}{c}{9697}   \\
 			$R^{2}$            & 0.731                      & 0.746                      & 0.783                              & 0.794                      & 0.809                      & 0.837                      \\ \hline
 			year dummies       & \V                         & \V                         & \V                                 & \V                         & \V                         & \V                         \\
 			indiv. charact.    &                            & \V                         & \V                                 &                            & \V                         & \V                         \\
 			workplace charact. &                            &                            & \V                                 &                            &                            & \V                         \\ \bottomrule
 		\end{tabular}
 		\begin{flushleft}
-			\caption*{\legend \\ Standard errors (clustered on individuals) in parenthesis}
+			\caption*{\legend \\ Standard errors (clustered on individuals) in parenthesis \\ Individual characteristics are \modelTwo. \\ Workplace characteristics are \modelThreeAdd. \\ \restrictions}
 		\end{flushleft}
 	\end{center}
 \end{table}
@@ -733,9 +757,10 @@ The effect on language fluency on unemployment is shown on Figure~\ref{fig:long-
 		\includegraphics[width=0.45\linewidth]{Figure1d.eps}
 		\label{fig:long-run_unemployment_english_women}
 	}
-	\caption{The effect of language fluency on unemployment, 1992--2012}
+	\caption{The effect of language fluency on unemployment, 1992--2012. \\ Control variables are \modelTwo. \agerestrictions }
 	\label{fig:long-run_unemployment}
 \end{figure}
+
 
 The results reveal a few interesting facts.  First, the effects are
 relatively stable over time, indicating that neither economic
@@ -774,7 +799,7 @@ that for men.
 		\includegraphics[width=0.45\linewidth]{Figure2d.eps}
 		\label{fig:long-run_wage_english_women}
 	}
-	\caption{The effect of language fluency on wage, 1992--2012}
+	\caption{The effect of language fluency on wage, 1992--2012. \\ Control variables are \modelTwo. \agerestrictions}
 	\label{fig:long-run_wage}
 \end{figure}
 
@@ -960,7 +985,7 @@ characteristics, including education and geographic location.
 		                  & \std{0.083} &     & \std{0.067} &     & \std{0.080} &   \\
 		region North-East & -0.527      & *** & -0.473      & *** & 0.022       &   \\
 		                  & \std{0.091} &     & \std{0.074} &     & \std{0.088} &   \\ \midrule
-		N obs             & 228         &     & 228         &     & 228         &   \\
+		\# observations             & 228         &     & 228         &     & 228         &   \\
 		$R^{2}$           & 0.2598      &     & 0.2831      &     & 0.108       &   \\ \bottomrule
 	\end{tabular}
 	\begin{flushleft}
@@ -1061,5 +1086,8 @@ decrease the measurement error in the future.
 
 \bibliographystyle{apacite}
 \bibliography{literatur}
+
+\appendix
+\input{appendix.tex}
 
 \end{document}

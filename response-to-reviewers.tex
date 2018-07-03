@@ -19,8 +19,16 @@
 \usepackage{setspace}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{xspace}
-\input{isomath}
-
+\usepackage{csquotes}
+ \usepackage[author=, status=draft]{fixme}
+\usepackage{isomath} %SKB: Changed from \input{isomath} to \usepackage{isomath}
+\newcommand{\skb}[1]{
+	\begin{quotation}
+		\color{Blue} SKB: #1	
+	\end{quotation}
+	
+	
+}
 \newcommand{\debug}[1]{\marginpar{\small\raggedright\begin{spacing}{1}
       \color{BrickRed} #1
 \end{spacing}
@@ -29,7 +37,11 @@
 {\slshape}{}
 
 \begin{document}
-
+	\section*{General remarks} % which are too long for the margin... .
+\begin{itemize}
+	\item A rather general remark, I added the occupation variable to the estimations, but did not redo the graphs or tables. The results should not differ much. It will show up in the tables with all coefficients.
+\item SKB: The column separating lines in Table 4 have some \enquote{holes}. We might have to switch from the dcolumn package to the siunitx package to fix these issues. I did not manage yet fix these issues. The referees did not complain, but it still looks ugly or strange. 
+\end{itemize}
 \section*{Response to the referees}
 
 \section{Comments by the editor}
@@ -117,6 +129,7 @@ references to 50 items.
   detail what is shown in the respective table and figure. For
   instance, the table notes should contain the included control
   variables, the sample period and the age restriction applied.
+  \debug{SKB: I added this information to the tables and the figures. The descriptions might need some polishing still.}
 \item 
 - Page 4: You write that you are only analysing individuals who are
 working or actively looking for a job, but in line 35 on the same page
@@ -127,6 +140,7 @@ is included in your sample.
   \debug{ot: let's make it equal (i.e. remove all observations with
     any of the variables missing.  Add a footnote that when we
     included all the variables, we still got the same results.}
+\debug{SKB: I estimated the models, but did not create yet the tables.}
   The sample size for different specification of the same analysis
 should be the equal. Otherwise it is difficult to conclude whether the
 changes in the coefficients are coming from the addition of more
@@ -137,10 +151,12 @@ interest. I suggest to provide tables including all coefficients (not
 the year dummies) in the Appendix. It might be interesting to see how
 the coefficients of the control variables change across the different
 models.
+\debug{SKB: Will add them after I figured out how to present the results nicely formatted. It boils down to finding the right options for the \enquote{estout} or the \enquote{outtex/outreg} user provided package in Stata. I could do the formatting in Excel myself, but I prefer the Stata solution. }
 \item 
 - All tables: Be consistent in the description of your tables. The
 table notes and the labels for e.g., "observations", are inconsistent
 across the different tables. 
+\debug{SKB: Fixed. Changed obs to observations}
 \item
   \debug{ot: this was because of both 'B. Chiswick' and
     'B. R. Chiswick' in the bibtex file, and bibtex wanted to
@@ -155,8 +171,10 @@ across the different tables.
 \item 
 - Page 2, line 58: Not the unemployment rate, but the probability of
 being unemployed is reduced.
+\debug{SKB: Got fixed by Svetlana I think.}
 \item 
 - Page 3, lines 46-50: You are using a comma as the decimal separator, but in all your tables you are using a point. Please use a point everywhere. 
+\debug{SKB: Fixed by someone.}
 \end{enumerate}
 
 
@@ -195,6 +213,7 @@ In the Discussion and Concluding Remarks section they state that
   how this was observed. Tying this to the results would be helpful
   and make it clearer exactly where these results come from.
 \item In Table 3 I am perplexed how the number of observations increases as more restrictions are added to the model. How could running the same model but including additional workplace controls increase the observations from 7978 to 8233 for men and 9697 to 9895 for women? It makes me somewhat cautious of the results—though it could just be a typo. Could the models be run using the same sample for each column?
+\debug{These typos got fixed.}
 \end{enumerate}
 
 \subsubsection*{6. Quality of Communication}
@@ -216,6 +235,7 @@ In the Discussion and Concluding Remarks section they state that
     45-50 The whole paragraph feels a little awkward. 
   \item I also do not know
     what “cv.ee” means.
+    \debug{SKB: We should set a link or further explanations}
   \end{enumerate}
 \item pg 13 ln 35. “However too little results are
   statistically significant.” Does this imply that they model is not
