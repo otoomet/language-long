@@ -518,21 +518,20 @@ We estimate the basic model in the following form:
 \begin{equation}
 	\label{eq:specification}
 	\begin{split}
-		y_{it} = &\: \alpha_{0} +
-		\beta_{RUS} \cdot RUS_{it} +
-		\beta_{EST} \cdot EST_{it} +
-		\beta_{ENG} \cdot ENG_{it} +
-		\\
-		& + \vec{\beta}_{X}' \vec{X}_{it} +
-		\upsilon_t + \epsilon_{it},
+		y_{it} ^{g} = &\: 
+		\\alpha_{g}{}' X_{it}^{g}+
+		\\& + \vec{beta}^{g}{}' \cdot \vec{L}_{it}^{g} +
+		\eta_{i}^{g} +
+		\upsilon_t^{g} + \epsilon_{it}^{g},
 	\end{split}
 \end{equation}
-where $y_{it}$ is the outcome (either unemployment indicator
-or log-wage)
-of individual $i$ in wave $t$; $RUS$, $EST$, and $ENG$ are the
-language skill descriptors; $\vec{X}$ are the other individual
-characteristics, $\upsilon_{t}$ are the year dummies and $\epsilon_{it}$
-is the idiosyncratic error term.  As we use panel data, we cluster the
+where $y_{it}^{g}$ is the outcome (either unemployment indicator
+or logarithm of net monthly wage)
+of individual $i$ in wave $t$ from ethnic group g; $\vec{X}^{g}$ are the other individual
+characteristics for both groups; $L$ is the vector of
+language skill descriptors, $eta_{i}^{g}$ is the individual-specific effect, $\upsilon_{t}^{g}$ are the year dummies and $\epsilon_{it}^{g}$
+is the idiosyncratic error term. We denote the groups g by E (Estonian) and R (Russian).
+As we use panel data, we cluster the
 standard errors on individuals.  When analysing the time trend, we
 replace the main language effects in~\eqref{eq:specification} by the
 \fxnote*{Did we estimate it really that way? At least not in my code.}{corresponding interactions}
