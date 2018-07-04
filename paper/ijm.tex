@@ -580,7 +580,8 @@ workplace descriptors.
 \label{subsec:basic_model_unemployment}
 
 The central results for unemployment regressions are given in
-\cref{tab:unemployment_estimation_by_sex_and_ethnic}.
+\cref{tab:unemployment_estimation_by_sex_and_ethnic_same_sample}.
+\footnote{This table is restricted to have the same number of observations across all models requested by reviewer. The unrestricted table is in the appendix \cref{tab:unemployment_estimation_by_sex_and_ethnic}.}
 
 The
 table clearly indicates that Estonian language skills are associated
@@ -598,18 +599,18 @@ virtually unchanged while for women the estimate falls by 30\%.
 			\toprule
 			&         \multicolumn{2}{c}{Men}         &        \multicolumn{2}{c}{Women}        \\
 			Estonians:      & \multicolumn{1}{c}{1}      & \multicolumn{1}{l}{\hspace{10pt}2} & \multicolumn{1}{c}{1}      & \multicolumn{1}{c}{2}      \\
-			Russian         & -0.026^{***}               & -0.010                             & -0.009^{*}                 & 0.010^{**}                 \\
+			Russian         & -0.026^{***}               & -0.001                             & -0.009^{*}                 & 0.010^{**}                 \\
 			                & (0.006)                    & (0.006)                            & (0.005)                    & (0.005)                    \\
 			English         & -0.047^{***}               & -0.019^{***}                       & -0.024^{***}               & -0.008^{*}                 \\
 			                & (0.004)                    & (0.005)                            & (0.004)                    & (0.004)                    \\
-			\# observations          & \multicolumn{1}{c}{36,160} & \multicolumn{1}{l}{36,132}         & \multicolumn{1}{l}{36,050} & \multicolumn{1}{c}{36,015} \\
+			\# observations          & \multicolumn{1}{c}{36,132} & \multicolumn{1}{l}{36,132}         & \multicolumn{1}{l}{36,015} & \multicolumn{1}{c}{36,015} \\
 			$R^{2}$         & 0.022                      & 0.047                              & 0.012                      & 0.036                      \\ \hline
 			Russians: & \\
 			Estonian        & -0.052^{***}               & -0.052^{***}                       & -0.065^{***}               & -0.045^{***}               \\
 			                & (0.010)                    & (0.011)                            & (0.009)                    & (0.010)                    \\
-			English         & -0.020                     & 0.006                              & -0.015                     & -0.003                     \\
+			English         & -0.020                     & 0.006                              & -0.014                     & -0.003                     \\
 			                & (0.012)                    & (0.014)                            & (0.011)                    & (0.012)                    \\
-			\# observations          & \multicolumn{1}{c}{12,946} & \multicolumn{1}{l}{12,942}         & \multicolumn{1}{l}{13,689} & \multicolumn{1}{c}{13,674} \\
+			\# observations          & \multicolumn{1}{c}{12,942} & \multicolumn{1}{l}{12,942}         & \multicolumn{1}{l}{13,674} & \multicolumn{1}{c}{13,674} \\
 			$R^{2}$         & 0.033                      & 0.066                              & 0.023                      & 0.043                      \\ \hline
 			year dummies    & \V                         & \V                                 & \V                         & \V                         \\
 			indiv. charact. &                            & \V                                 &                            & \V                         \\
@@ -645,10 +646,11 @@ small, and that of Russian is almost non-existent despite a largely
 bilingual service sector in the country.
 
 \subsection{Wage Regressions}
+%SKB: Adding occupation to Model 3 reduces the effects drastically. Beforehand I somehow forgot to add it to the estimation. Now occupation is included as it should have been in the first place.
 \label{subsec:basic_model_wage}
 
-\cref{tab:wage_estimation_by_sex_and_ethnic} presents the main
-results.
+\cref{tab:wage_estimation_by_sex_and_ethnic_same_sample} presents the main
+results.\footnote{This table is restricted to have the same number of observations across all models requested by reviewer. The unrestricted table is in the appendix \cref{tab:wage_estimation_by_sex_and_ethnic}.}
 
 The table
 confirms that wage is positively associated with fluency in other
@@ -656,36 +658,39 @@ languages, in particular English. The only remarkable exception is
 Estonian language for Russian men where we fail to find any positive
 effect for any model. This qualitatively repeats the results of
 \citet{Toomet2011}. However, for women we observe a sizeable
-positive effect between 12 and 16 percentage points, suggesting that
+positive effect between 6 and 16 percentage points, suggesting that
 \citet{Toomet2011} results only describe the male labour market.  The effect decreases somewhat
 (from 0.167 to 0.114) when including the individual characteristics
 into the model, suggesting that the premium
 is partly caused by education and potentially also by unobserved
-individual performance. Observable workplace characteristics do not
-influence the estimates.
+individual performance. Adding further observable workplace characteristics nearly halves the effects 
+(when accounting not only for the industry but also the occupation) %SKB: Might remove this sentence
+.
 
 \begin{table}[htbp]
 	\begin{center}
 		\caption{Estimation results for log wage}
 		\label{tab:wage_estimation_by_sex_and_ethnic_same_sample} %SKB 04.07.2018 14:22:Not yet updated only prepared
+		%Accounting for occupation in model reduced the Estonian coefficient for women drastically (from 0.12 down 0.06)!
+		%For other groups it is less
 		\begin{tabular}{l | D{.}{.}{3} @{\qquad} D{.}{.}{3} @{\qquad} D{.}{.}{3}  @{\qquad} | @{\qquad}
 				D{.}{.}{3} @{\qquad} D{.}{.}{3} @{\qquad} D{.}{.}{3}}
 			\toprule
 			&                                   \multicolumn{3}{c}{Men}                                    &                              \multicolumn{3}{c}{Women}                               \\
 			Estonians          & \multicolumn{1}{c}{1}      & \multicolumn{1}{c}{2}      & \multicolumn{1}{l}{\hspace{10pt}3} & \multicolumn{1}{c}{1}      & \multicolumn{1}{c}{2}      & \multicolumn{1}{c}{3}      \\\midrule
-			Russian            & 0.107^{***}                & 0.072^{***}                & 0.054^{***}                        & 0.096^{***}                & 0.041^{***}                & 0.035^{***}                \\
-			                   & (0.015)                    & (0.015)                    & (0.014)                            & (0.011)                    & (0.011)                    & (0.010)                    \\
-			English            & 0.343^{***}                & 0.162^{***}                & 0.145^{***}                        & 0.311^{***}                & 0.131^{***}                & 0.123^{***}                \\
-			                   & (0.013)                    & (0.015)                    & (0.013)                            & (0.010)                    & (0.010)                    & (0.010)                    \\
-			\# observations             & \multicolumn{1}{l}{22,290} & \multicolumn{1}{l}{22,274} & \multicolumn{1}{l}{21,785}         & \multicolumn{1}{l}{26,673} & \multicolumn{1}{l}{26,644} & \multicolumn{1}{c}{26,449} \\
-			$R^{2}$            & 0.726                      & 0.755                      & 0.790                              & 0.769                      & 0.810                      & 0.830                      \\ \midrule
+			Russian            & 0.112^{***}                & 0.078^{***}                & 0.043^{***}                        & 0.094^{***}                & 0.039^{***}                & 0.016^{*}                \\
+			                   & (0.015)                    & (0.015)                    & (0.014)                            & (0.011)                    & (0.011)                    & (0.009)                    \\
+			English            & 0.343^{***}                & 0.158^{***}                & 0.108^{***}                        & 0.311^{***}                & 0.130^{***}                & 0.075^{***}                \\
+			                   & (0.013)                    & (0.015)                    & (0.013)                            & (0.010)                    & (0.010)                    & (0.009)                    \\
+			\# observations             & \multicolumn{1}{l}{21,785} & \multicolumn{1}{l}{21,785} & \multicolumn{1}{l}{21,785}         & \multicolumn{1}{l}{26,673} & \multicolumn{1}{l}{26,644} & \multicolumn{1}{c}{26,449} \\
+			$R^{2}$            & 0.730                      & 0.760                      & 0.801                              & 0.769                      & 0.810                      & 0.830                      \\ \midrule
 			Russians:          &  \\
-			Estonian           & 0.018                      & -0.014                     & 0.008                              & 0.167^{***}                & 0.114^{***}                & 0.125^{***}                \\
-			                   & (0.018)                    & (0.019)                    & (0.018)                            & (0.014)                    & (0.014)                    & (0.014)                    \\
-			English            & 0.249^{***}                & 0.155^{***}                & 0.137^{***}                        & 0.223^{***}                & 0.089^{***}                & 0.089^{***}                \\
-			                   & (0.026)                    & (0.027)                    & (0.026)                            & (0.021)                    & (0.022)                    & (0.020)                    \\
-			\# observations             & \multicolumn{1}{l}{8234}   & \multicolumn{1}{l}{8233}   & \multicolumn{1}{l}{7978}           & \multicolumn{1}{l}{9904}   & \multicolumn{1}{l}{9895}   & \multicolumn{1}{c}{9697}   \\
-			$R^{2}$            & 0.731                      & 0.746                      & 0.783                              & 0.794                      & 0.809                      & 0.837                      \\ \hline
+			Estonian           & 0.020                      & -0.013                     & -0.009                              & 0.167^{***}                & 0.114^{***}                & 0.066^{***}                \\
+			                   & (0.018)                    & (0.019)                    & (0.018)                            & (0.014)                    & (0.014)                    & (0.013)                    \\
+			English            & 0.248^{***}                & 0.152^{***}                & 0.103^{***}                        & 0.223^{***}                & 0.089^{***}                & 0.054^{***}                \\
+			                   & (0.026)                    & (0.027)                    & (0.024)                            & (0.021)                    & (0.022)                    & (0.018)                    \\
+			\# observations             & \multicolumn{1}{l}{7978}   & \multicolumn{1}{l}{7978}   & \multicolumn{1}{l}{7978}           & \multicolumn{1}{l}{9904}   & \multicolumn{1}{l}{9895}   & \multicolumn{1}{c}{9697}   \\
+			$R^{2}$            & 0.731                      & 0.746                      & 0.794                              & 0.794                      & 0.809                      & 0.854                      \\ \hline
 			year dummies       & \V                         & \V                         & \V                                 & \V                         & \V                         & \V                         \\
 			indiv. charact.    &                            & \V                         & \V                                 &                            & \V                         & \V                         \\
 			workplace charact. &                            &                            & \V                                 &                            &                            & \V                         \\ \bottomrule
