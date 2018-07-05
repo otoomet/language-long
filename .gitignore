@@ -7,4 +7,5 @@ auto/
 
 # automatic files
 *eps-converted-to.pdf
+.Rprofile
 
