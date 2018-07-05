@@ -20,6 +20,7 @@
 
 \usepackage[format=hang, justification=RaggedRight]{caption}
 \usepackage[section]{placeins}
+\usepackage{float}
 \usepackage{booktabs}
 \usepackage{comment}
 \usepackage{graphicx}
@@ -446,7 +447,7 @@ ability.
 		Primary sector (\%)         & 14.10  & 9.80   & 13.00  & 6.43   & 9.91   & 7.46   & 8.82   & 8.11   \\
 		Secondary sector (\%)       & 31.02  & 27.20  & 32.63  & 19.41  & 47.21  & 29.72  & 41.54  & 24.07  \\
 		Tertiary sector (\%)        & 26.17  & 30.12  & 26.52  & 34.46  & 27.17  & 33.96  & 28.37  & 40.96  \\
-		\# observations             & 14,943 & 57,270 & 46,525 & 25,688 & 13,805 & 12,830 & 21,773 & 4,862  \\ \bottomrule
+		\# Observations             & 14,943 & 57,270 & 46,525 & 25,688 & 13,805 & 12,830 & 21,773 & 4,862  \\ \bottomrule
 	\end{tabular}%
 	\label{tab:descriptive}%
 	\caption*{\small
@@ -590,7 +591,7 @@ Russian men and women. We also see that the effect is not radically
 influenced by the individual characteristics--for men it is
 virtually unchanged while for women the estimate falls by 30\%.
 
-\begin{table}[t!]
+\begin{table}[h]
 	\begin{center}
 		\caption{Estimation results for unemployment.}
 		\label{tab:unemployment_estimation_by_sex_and_ethnic_same_sample} %SKB 04.07.2018 14:22:Not yet updated only prepared
@@ -603,14 +604,14 @@ virtually unchanged while for women the estimate falls by 30\%.
 			                & (0.006)                    & (0.006)                            & (0.005)                    & (0.005)                    \\
 			English         & -0.047^{***}               & -0.019^{***}                       & -0.024^{***}               & -0.008^{*}                 \\
 			                & (0.004)                    & (0.005)                            & (0.004)                    & (0.004)                    \\
-			\# observations          & \multicolumn{1}{c}{36,132} & \multicolumn{1}{l}{36,132}         & \multicolumn{1}{l}{36,015} & \multicolumn{1}{c}{36,015} \\
+			\# Observations          & \multicolumn{1}{c}{36,132} & \multicolumn{1}{l}{36,132}         & \multicolumn{1}{l}{36,015} & \multicolumn{1}{c}{36,015} \\
 			$R^{2}$         & 0.022                      & 0.047                              & 0.012                      & 0.036                      \\ \hline
 			Russians: & \\
 			Estonian        & -0.052^{***}               & -0.052^{***}                       & -0.065^{***}               & -0.045^{***}               \\
 			                & (0.010)                    & (0.011)                            & (0.009)                    & (0.010)                    \\
 			English         & -0.020                     & 0.006                              & -0.014                     & -0.003                     \\
 			                & (0.012)                    & (0.014)                            & (0.011)                    & (0.012)                    \\
-			\# observations          & \multicolumn{1}{c}{12,942} & \multicolumn{1}{l}{12,942}         & \multicolumn{1}{l}{13,674} & \multicolumn{1}{c}{13,674} \\
+			\# Observations          & \multicolumn{1}{c}{12,942} & \multicolumn{1}{l}{12,942}         & \multicolumn{1}{l}{13,674} & \multicolumn{1}{c}{13,674} \\
 			$R^{2}$         & 0.033                      & 0.066                              & 0.023                      & 0.043                      \\ \hline
 			year dummies    & \V                         & \V                                 & \V                         & \V                         \\
 			indiv. charact. &                            & \V                                 &                            & \V                         \\
@@ -682,14 +683,14 @@ individual performance. Adding further observable workplace characteristics near
 			                   & (0.015)                    & (0.015)                    & (0.014)                            & (0.011)                    & (0.011)                    & (0.009)                    \\
 			English            & 0.343^{***}                & 0.158^{***}                & 0.108^{***}                        & 0.311^{***}                & 0.130^{***}                & 0.075^{***}                \\
 			                   & (0.013)                    & (0.015)                    & (0.013)                            & (0.010)                    & (0.010)                    & (0.009)                    \\
-			\# observations             & \multicolumn{1}{l}{21,785} & \multicolumn{1}{l}{21,785} & \multicolumn{1}{l}{21,785}         & \multicolumn{1}{l}{26,673} & \multicolumn{1}{l}{26,644} & \multicolumn{1}{c}{26,449} \\
+			\# Observations             & \multicolumn{1}{l}{21,785} & \multicolumn{1}{l}{21,785} & \multicolumn{1}{l}{21,785}         & \multicolumn{1}{l}{26,673} & \multicolumn{1}{l}{26,644} & \multicolumn{1}{c}{26,449} \\
 			$R^{2}$            & 0.730                      & 0.760                      & 0.801                              & 0.769                      & 0.810                      & 0.830                      \\ \midrule
 			Russians:          &  \\
 			Estonian           & 0.020                      & -0.013                     & -0.009                              & 0.167^{***}                & 0.114^{***}                & 0.066^{***}                \\
 			                   & (0.018)                    & (0.019)                    & (0.018)                            & (0.014)                    & (0.014)                    & (0.013)                    \\
 			English            & 0.248^{***}                & 0.152^{***}                & 0.103^{***}                        & 0.223^{***}                & 0.089^{***}                & 0.054^{***}                \\
 			                   & (0.026)                    & (0.027)                    & (0.024)                            & (0.021)                    & (0.022)                    & (0.018)                    \\
-			\# observations             & \multicolumn{1}{l}{7978}   & \multicolumn{1}{l}{7978}   & \multicolumn{1}{l}{7978}           & \multicolumn{1}{l}{9904}   & \multicolumn{1}{l}{9895}   & \multicolumn{1}{c}{9697}   \\
+			\# Observations             & \multicolumn{1}{l}{7978}   & \multicolumn{1}{l}{7978}   & \multicolumn{1}{l}{7978}           & \multicolumn{1}{l}{9904}   & \multicolumn{1}{l}{9895}   & \multicolumn{1}{c}{9697}   \\
 			$R^{2}$            & 0.731                      & 0.746                      & 0.794                              & 0.794                      & 0.809                      & 0.854                      \\ \hline
 			year dummies       & \V                         & \V                         & \V                                 & \V                         & \V                         & \V                         \\
 			indiv. charact.    &                            & \V                         & \V                                 &                            & \V                         & \V                         \\
