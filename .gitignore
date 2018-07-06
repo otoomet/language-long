@@ -2,6 +2,7 @@
 *.aux
 *.bbl
 *.log
+*.blg
 
 # temp folders
 auto/

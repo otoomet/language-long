@@ -66,12 +66,13 @@ maleWageF <- function(data, years=2000:2012, ages=25:50) {
       facet_grid(metro ~ edu) +
       coord_cartesian(ylim=c(-2,2)) +
       labs(fill="Speaks\nEstonian")
-   subset[, .(wage = mean(wage), residual=mean(residual), n = .N), keyby=.(et)] %>%
+   t1 <- subset[, .(wage = mean(wage), residual=mean(residual), n = .N), keyby=.(et)] %>%
       print()
-   subset[, .(wage = mean(wage), residual=mean(residual), n = .N), keyby=.(metro, et)] %>%
+   t2 <- subset[, .(wage = mean(wage), residual=mean(residual), n = .N), keyby=.(metro, et)] %>%
       print()
-   subset[, .(wage = mean(wage), residual=mean(residual), n = .N), keyby=.(metro, edu, et)] %>%
+   t3 <- subset[, .(wage = mean(wage), residual=mean(residual), n = .N), keyby=.(metro, edu, et)] %>%
       print()
    hlay <- matrix(c(1,2,3,3,3), nrow=1)
    gridExtra::grid.arrange(plain, metro, edu, ncol=3, layout_matrix=hlay)
+   t3
 }

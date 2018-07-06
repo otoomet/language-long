@@ -2,7 +2,7 @@
 \documentclass[12pt, a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[margin=3cm,top=2.5cm, bottom=2.0cm]{geometry}
+\usepackage[margin=2.5cm,top=2.5cm, bottom=2.0cm]{geometry}
 \usepackage[english]{babel}
 %\usepackage{lmodern}
 \usepackage{newtxtext}
@@ -135,6 +135,7 @@ communication-intensive jobs.\\
 \textbf{Keywords:} language skills, ethnicity, wage gap, unemployment, Estonia \\
 \textbf{JEL classification:} J15, J31, J71
 
+
 \section{Introduction}
 \label{sec:introduction}
 Numerous studies document that language skills are related to better
@@ -145,7 +146,6 @@ or by making it possible to perform
 tasks that require language knowledge.
 Enhanced productivity, in turn, should be reflected both in better wage
 and in improved employment prospects.
-
 
 The bulk of the existing literature analyses the effect of knowledge
 of the local majority language for immigrants.  It is well known that
@@ -937,8 +937,60 @@ do not present the tables here.
 \section{Additional Evidence: Education and Workplace}
 \label{sec:segregation_analysis}
 
-Previous results can be explained by two hypotheses: first, Russian--speaking men are working
-primarily in Russian language environment while this is not true for
+The most interesting result in our analysis so far--the fact that
+Russian men earn virtuannly no Estonian language premium--warrants a
+deeper look at the data.  We split the Russian male wage-earners' data according to three
+dimensions: Estonian language skills, residence in Tallinn metro area,
+and education.  However, to correct very strong trends through these
+years both in wage and language skills, we present the average
+residuals from an OLS regression that explains log wage by year fixed
+effects (Table~\ref{tab:loc-lang-edu}). 
+\fxwarning{ot: Sven, can you redo this table?  Use exactly the same
+  sample as you used.  Would also be good to put both et1 and et0 on
+  the same row}
+The table show that the picture is in fact more complex.  We can see
+that there is little to no gain from Estonian skills for the
+largest group, high-school educated workers.  Even more, outside of
+the metropolitan area, the the lowest and highest education groups
+have in fact negative language premium.  However, these two groups
+enjoy quite a noticeable premium in the Tallinn region.  The
+opposite-signed effects in for these two education groups suggests
+selective internal migration may play a role.
+
+% latex table generated in R 3.4.4 by xtable 1.8-2 package
+% Fri Jul  6 15:59:47 2018
+\begin{table}[ht]
+  \centering
+  \caption{Average wage and time-trend corrected residual across
+    location and education groups for Russian men}
+  \begin{tabular}{lrlrrr}
+    \toprule
+    Tallinn & education & ET & wage & residual & \# obs \\ 
+    \midrule
+    Tallinn & $<$ HS & 0 & 4313.38 & -0.19 & 255 \\ 
+    Tallinn & $<$ HS & 1 & 5351.11 & -0.05 & 219 \\ 
+    Tallinn & HS     & 0 & 5803.21 & 0.05 & 1292 \\ 
+    Tallinn & HS      & 1 & 5666.77 & 0.05 & 1296 \\ 
+    Tallinn & college & 0 & 6562.57 & 0.16 & 212 \\ 
+    Tallinn & college & 1 & 8453.14 & 0.30 & 518 \\ 
+    other   & $<$ HS & 0 & 3877.84 & -0.13 & 461 \\ 
+    other   & $<$ HS & 1 & 4496.62 & -0.18 & 230 \\ 
+    other   & HS     & 0 & 4838.65 & -0.09 & 2233 \\ 
+    other   & HS      & 1 & 5351.51 & -0.05 & 960 \\ 
+    other   & college & 0 & 6283.38 & 0.17 & 278 \\ 
+    other   & college & 1 & 6072.06 & 0.13 & 263 \\ 
+    \bottomrule
+  \end{tabular}
+  \label{tab:loc-lang-edu}
+\end{table}
+
+We can conclude the table~\ref{tab:loc-lang-edu} that our
+most controversial finding, no positive effect of Estonian language
+skills for Russian men, is primarily driven by workers with
+high-school degree.
+
+All previous results can be explained by two hypotheses: first, Russian--speaking men are working
+primarily in Russian language environment (ethnic segregation) while this is not true for
 women; and second, Russian-speaking men are working in jobs with
 little communication requirements (gender segregation).
 
@@ -1019,11 +1071,8 @@ working in less segregated environment where Estonian is the main
 communication language, and they need Estonian for other reasons as
 well.  Gender differences in English usage are not statistically
 significant.
-
-Additionally we briefly analysed online job market \href{http://www.cv.ee/english/}{cv.ee}.  We measured all jobs
-that required English, Finnish and Russian, and calculated the average education requirement
-at these jobs (coded as college/less than college education).  According to the observations,
-the jobs that required English, in average, 51\% of college education while those where Finnish is requested, 19\% and Russian is 26\% respectively.
+\fxwarning{ot: let's remove the cv.ee stuff.  Or substantially improve
+that.}
 
 \section{Discussion and Concluding Remarks}
 \label{sec:discussion}
