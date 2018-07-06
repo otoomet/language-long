@@ -32,10 +32,11 @@ maleWageF <- function(data, years=2000:2012, ages=25:50) {
    library(magrittr)
    library(ggplot2)
    subset <- data[sex == 1 & !is.na(wage) & !is.na(residenceCounty) & nonEst,
-                  .(wage, estLevel, residenceCounty, edu, age, date)][
+                  .(wage, estLevel, engLevel, residenceCounty, edu, age, date)][
       wage > 0, ][
     , metro := residenceCounty == 37][
     , et := estLevel %in% c("1", "2", "home")][
+    , en := engLevel %in% c("1", "2", "home")][
     , edu := factor(edu, levels=c("<=basic", "highSchool", "college"))][
       year(date) %in% years & age >= min(ages) & age <= max(ages), ]
    subset[, metro := ifelse(metro, "metro", "other")]
@@ -47,20 +48,20 @@ maleWageF <- function(data, years=2000:2012, ages=25:50) {
    subset[, residual := residuals(m2)]
    plain <- subset %>%
       ggplot(aes(x=et, y=residual)) +
-      geom_violin(aes(fill=et)) +
+      geom_violin(aes(fill=et), alpha=0.6) +
       stat_summary(fun.y=mean, geom="point") +
       coord_cartesian(ylim=c(-2,2)) +
       theme(legend.position="none")
    metro <- subset %>%
       ggplot(aes(x=et, y=residual)) +
-      geom_violin(aes(fill=et)) +
+      geom_violin(aes(fill=et), alpha=0.6) +
       stat_summary(fun.y=mean, geom="point") +
       facet_grid(metro ~ .) +
       coord_cartesian(ylim=c(-2,2)) +
       theme(legend.position="none")
    edu <- subset %>%
       ggplot(aes(x=et, y=residual)) +
-      geom_violin(aes(fill=et)) +
+      geom_violin(aes(fill=et), alpha=0.6) +
       stat_summary(fun.y=mean, geom="point") +
       facet_grid(metro ~ edu) +
       coord_cartesian(ylim=c(-2,2)) +

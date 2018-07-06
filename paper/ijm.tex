@@ -2,7 +2,7 @@
 \documentclass[12pt, a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[margin=2.5cm, top=2.5cm, bottom=2.0cm]{geometry}
+\usepackage[margin=3cm,top=2.5cm, bottom=2.0cm]{geometry}
 \usepackage[english]{babel}
 %\usepackage{lmodern}
 \usepackage{newtxtext}
@@ -25,8 +25,7 @@
 \usepackage{comment}
 \usepackage{graphicx}
 \usepackage{epstopdf}
- 
- \usepackage[author=, status=final]{fixme}
+\usepackage[layout=margin,author=,status=draft]{fixme}
   \usepackage[final]{changes} %Manually track changes
  \definechangesauthor{SKB}
 \usepackage{longtable}
@@ -52,6 +51,7 @@
 \def\fns{\footnotesize}
 \renewcommand*{\vec}[1]{\boldsymbol{#1}}
 
+\fxsetup{theme=color}
 \def\tenpc{$^{\ast}$}
 \def\fivepc{$^{\ast\ast}$}
 \def\onepc{$^{\ast\ast\ast}$}
@@ -388,6 +388,7 @@ the need of communication.
 
 The average wages, language skills and other explanatory variables together with the relative frequencies for the period 2000--2012 are presented in \cref{tab:descriptive}. We report the data separately for ethnic nationalities (Estonians and Russians) and language
 skills (Estonian, Russian and English).
+\fxwarning{OT: can you add variable 'year' in this table?  I know it feels a little weird but is great to show time trends.}
 
 The table indicates that there are substantial disparities between
 Estonians and Russians in wage and unemployment. For instance, the
@@ -1096,5 +1097,7 @@ decrease the measurement error in the future.
 \clearpage
 \appendix
 \input{appendix.tex}
+
+\listoffixmes
 
 \end{document}

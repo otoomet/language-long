@@ -4,6 +4,7 @@
 
 # temp folders
 auto/
+figs/
 
 # automatic files
 *eps-converted-to.pdf
