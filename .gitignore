@@ -3,6 +3,7 @@
 *.bbl
 *.log
 *.blg
+*.lox
 
 # temp folders
 auto/
