@@ -1,6 +1,7 @@
 # latex crap
 *.aux
 *.bbl
+*.log
 
 # temp folders
 auto/
