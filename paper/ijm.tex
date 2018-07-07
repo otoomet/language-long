@@ -246,26 +246,30 @@ statistics. In \cref{sec:method} we describe the econometric
 approach, sections \ref{sec:results} and \ref{sec:extensions} present
 the results for unemployment probability and wages.
 
+
 \section{Background: Ethnic Groups and Languages in Estonia}
 \label{sec:hist_background}
 
-This section briefly reviews Estonian institutional background,
+This section briefly reviews the institutional and economic background
+in Estonia, a country of 1.3M inhabitants,
 focusing on the role of ethnic groups and languages.
 See \citet{Leping2008} and
 \citet{lindemann+saar2011Russian2ndGeneration} for more information.
 
-Before the Second World War, Estonia was ethnically rather
+Before the Second World War, the country was ethnically rather
 homogeneous, populated almost exclusively by ethnic Estonians. After the War,
 the Russian-speaking population grew rapidly through migration and
-reached 40\% by 1989.
+reached 40\% by 1989.  The migrants largely settled in Ida-Virumaa, a
+mineral-rich industrial area in North-East of the country, and in the
+metropolitan area near the capital city Tallinn, and hence the
+Russian-speakers are still very unevenly distributed across the country.
+
 Such an influx of mainly
 Russian-speaking population
 led to two \emph{de facto} official languages
 by 1970s.
 The society was largely divided across language, and the division was
 also reflected at workplace \citep{leppik+vihalemm2015JofBaltStud}.
-
-
 Certain sectors in the economy, such as the army, railways and the
 merchant fleet
 were dominated by
@@ -301,29 +305,34 @@ curriculum in Estonian \citep{lindemann+saar2011Russian2ndGeneration}.
 According to the report of the Ministry of Education and Research the number
 of students, whose mother tongue is not Estonian in basic schools who study in the Estonian language increased from 17.5\% in 2005 to 25.8\% in 2015 due to the growing popularity of immersion
 classes (enrolment of classes rose from 7.8\% in 2005 to 17.5\% in 2015).
-At the same time the number of students whose mother tongue is not Estonian studying in Estonian basic schools slowly dropped respectively from 9.5\% to  8.3\% \citep{HTM2015}.
+At the same time the number of students whose mother tongue is not
+Estonian studying in Estonian basic schools slowly dropped
+respectively from 9.5\% to  8.3\% \citep{HTM2015}.  The younger generation of ethnic Estonians is
+increasingly less fluent in Russian while the ethnic Russians are
+steadily getting better in Estonian.
 
+The Estonian economy, a part of the Soviet economy up to 1991, successfully
+re-oriented to the Western markets and has been growing rapidly since
+the mid-1990s.  
+  As
+a bi-product of the re-adjustment, English skills become extremely
+valuable while the supply was still rather limited during the early
+years of transition.
 
-The younger generation of ethnic Estonians is
-increasingly less fluent in Russian while the opposite is true for ethnic Russians. As
-a bi-product of the rapid integration to the West, the importance of English language rose
-substantially.
-
-As a result of the economic and political reforms, substantial
+The economic and political reforms led to substantial
 disparities in income and education opportunities
-emerged
 in the early 1990s \citep{Leping2008,
 	lindemann+saar2011Russian2ndGeneration}.  The inter-ethnic contacts
 are largely limited to superficial encounters at work and in public
-space, the close private ties remain limited
-\citep{korts2009JofBaltStud}.  Both ethnic groups have only few  are
-largely living on their own with limited contacts. The
+space, the number of close private ties remain limited
+\citep{korts2009JofBaltStud}.  The
 separate worlds are also reflected in media which may present quite
 different and occasionally antagonistic viewpoints depending on the
 language \citep{Korts2002}.  Around 25\% of Estonians show little
 tolerance for Russian-speaking population (the corresponding figure
 for Russians is substantially smaller).  A major issue for this group
 is Russians' ability and willingness to communicate in Estonian.
+\fxwarning{ot: citation here?}
 
 
 \section{Data}
@@ -333,16 +342,16 @@ is Russians' ability and willingness to communicate in Estonian.
 \label{sec:variables}
 
 Our main analysis relies on the Estonian Labour Force Survey (ELFS),
-first conducted in 1995. Until 1999 the survey was an annual
-cross-section and later as a quarterly rotating panel.  The number of distinct
-individuals is around 4000 annually. However, due to the rotating
-structure, we have about 16,000 annual observations.
-The reader should keep in mind that while the pre-2000 waves include retrospective income, they do not include retrospective language skills. In this way, the results before
-1995 are partly based on extrapolation, assuming individual language
-skills did not vary before that date.  In the main analysis, we only
-analyse the 2000--2012 time period but we also provide a long-term
-picture that includes the
-earlier waves from 1989--1999.
+first conducted in 1995 by the Estonian Statistical Office.  We limit
+ourselves with years 2000--2012 in the main analysis, motivated by a
+methodology break: Until 1999 the survey was conducted as an annual
+cross-section and later as a quarterly rotating panel.  The survey
+contains data on approximately 4000 distinct individuals annually,
+however, due to it's rotating nature, we have roughly 16,000 annual
+observations for each year since 2000.  For the long-term analysis we
+also use the earlier waves.  These wave also include a retrospective
+section that contains income up to several years back.
+
 We limit ourselves to men and women in the main working age, between 25 and
 55 years old.  Further, we only analyse
 individuals who are either working or actively looking for a job.
@@ -353,23 +362,26 @@ and family status.  The central variables in this study are the same
 as in \citep{Leping2008}:
 
 In all waves of the survey, respondents are asked about their
-\emph{ethnic nationality}.  Typically, individuals have a single ethnic
+``ethnic nationality''.  Typically, individuals have a single ethnic
 identity.  The answers are coded as ``Estonian'' or
 ``non--Estonian''.  As most of those who do not consider themselves
 Estonian use Russian as their primary language, we refer to this group
 as ``Russians''.
 
-The labour market outcomes include ``last salary on the main job'' and
-labour force status (working, unemployed or inactive).
+The labor market outcomes we analyze are income, the ``last salary on the main job'' and
+labor force status (working, unemployed or inactive).  
 
 The survey includes self-reported language skills on languages used at
 home, and all other languages they understand.  The respondents are
 give some guidance in assessing their skills, they can report either
 no knowledge, understanding, speaking, writing, or using the
-language at home.  We consolidate this information into a dummy, equal to zero
-for languages one cannot speak (but potentially understand) and
-unity if one speaks, speaks or writes, or uses that language at
-home.
+language at home.  We consolidate this information into a dummy variable, equal
+to one if one speaks or writes, or uses that language at
+home, and zero otherwise.  Hence we disregard passive understanding
+only.
+  The reader should keep in mind that while the pre-2000 waves include retrospective income, they do not include retrospective language skills. In this way, the results before
+1995 are partly based on extrapolation, assuming individual language
+skills did not vary before that date.
 
 For further evidence on ethnic and gender segregation at workplace we use data
 from 2008 Integration Monitor Survey.  The survey was conducted by
@@ -392,11 +404,9 @@ skills (Estonian, Russian and English).
 The table indicates that there are substantial disparities between
 Estonians and Russians in wage and unemployment. For instance, the
 average monthly salary\footnote{When interpreting the wage,
-	one should keep in mind that during the period
+  one should keep in mind that during the period
 	of observation, 2000-2012, the average salary increased by 180\%,
-	from \EUR{314} to \EUR{887} monthly.
-
-} of Estonian
+	from \EUR{314} to \EUR{887} monthly.} of Estonian
 males who are not fluent in English is \EUR{532} while for Russians it
 is only \EUR{452}. However, we also see that Russians who speak
 English earn approximately 40\% more than those who do not (\EUR{452}
