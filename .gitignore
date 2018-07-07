@@ -5,6 +5,7 @@
 *.blg
 *.lox
 *.out
+*.soc
 
 # temp folders
 auto/
