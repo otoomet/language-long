@@ -61,13 +61,12 @@
 			:\hspace{1em} $\dag$ : 10\% \hspace{1em}
 			$\ast$ : 5\% \hspace{1em} $\ast\ast$ : 1\% \normalsize}}}
 %SKB: Added for documenting the tables and figures
-\newcommand{\modelTwo}{age, age\textsuperscript{2}, education, being married, number of children, inter-ethnic household}
-\newcommand{\modelThree}{\modelTwo, industry, occupation ,ownership type of company, number of workers in company, working in the public sector, experience in company}
+\newcommand{\modelTwo}{age, age\textsuperscript{2}, education, marriage, number of children, inter-ethnic household}
+\newcommand{\modelThree}{\modelTwo, industry, occupation, ownership type of company, number of workers in company, working in the public sector, experience in company}
 \newcommand{\modelThreeAdd}{industry, occupation, ownership type of company, number of workers in company, working in the public sector, experience in company}	
 \newcommand{\restrictions}{The sample period is from year 2000 to year 2012. Sample is limited to persons
 	25-55 year old.}
-\newcommand{\agerestrictions}{Sample is limited to persons
-	25-55 year old.}
+\newcommand{\agerestrictions}{25-55 year olds only.}
 %Modified section numbering	
 \renewcommand{\thesection}{\arabic{section}.}
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}.}
@@ -514,7 +513,7 @@ Several related studies use instrumental variables to correct for
 omitted variable bias and measurement errors \citep{Chiswick1995, bleakley+chin2004}.
 We refrain from doing that. Our decision is mainly data driven,
 there are no suitable instruments in our data,\footnote{We run an IV
-	regression using age--at--immigration to instrument Estonian skills
+	regression using age at immigration to instrument Estonian skills
 	for those Russians who were in the country at 1990.  The results are
 	not statistically significant at any conventional level.} but it also facilitates
 comparison with other studies.  For instance,
@@ -545,7 +544,7 @@ or Russian); $\vec{X}$ are the other individual
 characteristics; $\vec{L}$ is the vector of
 language skill descriptors, $\eta_{i}^{g}$ is the individual-specific effect, $\upsilon_{t}^{g}$ are the year dummies and $\epsilon_{it}^{g}$
 is the idiosyncratic error term. 
-\fxerror{ot: what's eta?  do you do random effects?}
+\fxerror{ot: what's the eta term?  do you do random effects?}
 As we use panel data, we cluster the
 standard errors on individuals.  When analysing the time trend, we
 replace the main language effects in~\eqref{eq:specification} by the
@@ -574,15 +573,16 @@ we only estimate the first two models.
 \label{subsec:basic_model_unemployment}
 
 The central results for unemployment regressions are given in
-\cref{tab:unemployment_estimation_by_sex_and_ethnic_same_sample}.
-\footnote{This table is restricted to have the same number of observations across all models requested by reviewer. The unrestricted table is in the appendix \cref{tab:unemployment_estimation_by_sex_and_ethnic}.}
-
+\cref{tab:unemployment_estimation_by_sex_and_ethnic_same_sample}.\footnote{We
+  restrict both models to have the same number of observations as
+  requested by a reviewer. The unrestricted table is in the appendix \cref{tab:unemployment_estimation_by_sex_and_ethnic}.}
 The
 table clearly indicates that Estonian language skills are associated
 with approximately 5 percentage points lower unemployment for both
 Russian men and women. We also see that the effect is not radically
 influenced by the individual characteristics--for men it is
-virtually unchanged while for women the estimate falls by 30\%.
+virtually unchanged while for women the estimate falls by 30\%, from
+6.5 to 4.5 percentage points.
 
 \begin{table}[h]
 	\begin{center}
@@ -621,9 +621,9 @@ Neither Russian nor English show a comparably strong effect.
 Knowledge of Russian is not associated with less unemployment for
 Estonian men, and is even related to a slightly higher unemployment
 for Estonian women. The latter outcome may be related to omitted
-variable bias, Russian knowledge was widespread before 1990 and may
+variable bias, Russian knowledge was widespread in the Soviet era and may
 not have been closely associated with any favourable characteristics,
-but during the period was increasingly more associated with age.
+but has been increasingly more associated with age  during the period of analysis.
 English skills are related to less unemployment both for Estonian men
 and women, but the effect is small.
 For Russians, however, Estonian language skills matter. Those who are
@@ -634,34 +634,38 @@ fluency is close to zero and not statistically significant.  As in
 case of Estonian, individual characteristics change the estimates only
 a little.
 
-In summary, these results suggest that the Estonian language is
-important for employment prospects. The role of English is
-small, and that of Russian is almost non-existent despite a largely
-bilingual service sector in the country.
+In summary, these results suggest that Estonian is the only language
+that matters for the employment prospects.  Despite of widespread
+bilingualism in the service sector, and increasing global importance of
+English, these languages are not closely associated with unemployment
+probability. 
 
-\subsection{Wage Regressions}
+\subsection{Wage}
 %SKB: Adding occupation to Model 3 reduces the effects drastically. Beforehand I somehow forgot to add it to the estimation. Now occupation is included as it should have been in the first place.
 \label{subsec:basic_model_wage}
 
-\cref{tab:wage_estimation_by_sex_and_ethnic_same_sample} presents the main
-results.\footnote{This table is restricted to have the same number of observations across all models requested by reviewer. The unrestricted table is in the appendix \cref{tab:wage_estimation_by_sex_and_ethnic}.}
-
+\cref{tab:wage_estimation_by_sex_and_ethnic_same_sample} presents the
+central wage regression
+results.\footnote{As above, we
+  restrict both models to have the same number of observations as
+  requested by a reviewer.  The unrestricted table is in the appendix \cref{tab:wage_estimation_by_sex_and_ethnic}.}
 The table
-confirms that wage is positively associated with fluency in other
-languages, in particular English. The only remarkable exception is
+confirms the descriptive evidence that wage is positively associated
+with fluency of all analyzed languages with English showing the
+largest effect.  The only remarkable exception is
 Estonian language for Russian men where we fail to find any positive
-effect for any model. This qualitatively repeats the results of
+effect for any of the specifications.  This qualitatively repeats the results of
 \citet{Toomet2011}. However, for women we observe a sizeable
 positive effect between 6 and 16 percentage points, suggesting that
-\citet{Toomet2011} results only describe the male labour market.  The effect decreases somewhat
+\citet{Toomet2011} results are not valid for the female labour market.  The effect decreases somewhat
 (from 0.167 to 0.114) when including the individual characteristics
 into the model, suggesting that the premium
 is partly caused by education and potentially also by unobserved
-individual performance. Adding further observable workplace characteristics nearly halves the effects 
-(when accounting not only for the industry but also the occupation) %SKB: Might remove this sentence
-.
+individual performance.  Adding observable workplace characteristics
+lowers the effects further to 0.066, suggesting that part of the
+language skill premium is collected through workplace mobility.
 
-\begin{table}[htbp]
+\begin{table}[tbp]
 	\begin{center}
 		\caption{Estimation results for log wage}
 		\label{tab:wage_estimation_by_sex_and_ethnic_same_sample} %SKB 04.07.2018 14:22:Not yet updated only prepared
@@ -697,13 +701,9 @@ individual performance. Adding further observable workplace characteristics near
 
 We also see that knowledge of Russian language is associated with a
 substantial income premium of 10\% for both Estonian men and women.
-The effect approximately halves when introducing
-individual controls, suggesting that it is partly related to
-education and potentially also to ability. It
-falls further when also controlling for the
-workplace characteristics, indicating that Estonians' income is
-better characterized by available workplace
-variables.
+The effect falls rapidly when introducing
+individual and workplace controls, suggesting that both ability bias
+and workplace mobility play a role.
 
 English language is associated with a very large
 wage premium, up to 34 log points (model 1 for
@@ -720,8 +720,8 @@ In conclusion, the wage regressions suggest that English is the main
 language that matters for men.  The effect of Russian is minor and
 that of Estonian non-existent.  For women, all three languages are
 associated with higher wage but Russian to a smaller extent.
-This is in a stark contrast to the unemployment regressions, we return to
-this question in the discussion.
+This is in a stark contrast to the unemployment regressions and we return to
+this question in the discussion below.
 
 
 \section{Extensions}
@@ -730,14 +730,29 @@ this question in the discussion.
 \subsection{A Long-Run View}
 \label{sec:long-run}
 
-Here we look at the yearly estimates from 1992 to 2012.
-We report those for the model 2.\footnote{The results for other models
-	look essentially the same. If we add more variables like in model 3 then the effect size reduces by about five to ten percentage points, but the overall picture remains the same.}
+As Estonian economy went through turbulent times and rapid changes
+during the 1990s, additional evidence can be gained by a long-term
+trends in the estimated effect size.  Here we look at the yearly estimates from 1992 to 2012.
+We report the results for model 2, i.e. models that include year
+dummies and individual controls, but not workplace
+characteristics.\footnote{The results for models with workplace data (model
+  3 for wage)
+  look qualitatively similar.  More controls in the model reduces the effect size but does not qualitatively
+  change it's temporal pattern.}
 
+The effect of language fluency on unemployment is shown on
+Figure~\ref{fig:long-run_unemployment}, and on wage on
+Figure~\ref{fig:long-run_wage}.
+\fxnote{ot: SKB, I think I asked if you can slightly offset the black
+  and red lines and you could not?}
+The results reveal a few interesting facts.  First, the effects are
+relatively stable over time, indicating that neither economic
+environment nor the data quality have changed rapidly.  Estonian
+fluency has been associated with less unemployment for both Russian men and
+women since around year 2000, in 1990s it had little effect.  Russian fluency,
+in contrast, had never had an impact on Estonians' unemployment probability.
 
-The effect on language fluency on unemployment is shown on Figure~\ref{fig:long-run_unemployment} and on wage on Figure~\ref{fig:long-run_wage}
-
-\begin{figure}[hbtp]
+\begin{figure}[bt!]
 	\centering
 	\subfigure[Non-native languages for men]{
 		\includegraphics[width=0.45\linewidth]{Figure1a.eps}
@@ -760,18 +775,9 @@ The effect on language fluency on unemployment is shown on Figure~\ref{fig:long-
 	\label{fig:long-run_unemployment}
 \end{figure}
 
-
-The results reveal a few interesting facts.  First, the effects are
-relatively stable over time, indicating that neither economic
-environment nor the data quality have changed rapidly.  Estonian
-fluency has been associated with less unemployment for both men and
-women since around year 2000, in 1990s it had little effect.  Russian fluency,
-in contrast, had never an impact on unemployment probability.
-
-
 For Estonian men, fluency in English is associated with less unemployment through the whole
 period of observation whereas fluency in Russian has no effect.
-Only few of the results are statistically significant pointwise though.
+Only few of the results are pointwise statistically significant though.
 For Estonian women, both languages are associated with less
 unemployment in the 1990s but not later. The picture is different for
 Russians. For men, we cannot see any substantial effect of fluency in English
@@ -780,7 +786,7 @@ the late 1990s on. For women, the picture is mostly similar, just the
 effect of Estonian language seems to be somewhat delayed compared to
 that for men.
 
-\begin{figure}[hbtp]
+\begin{figure}[tb!]
 	\centering
 	\subfigure[Non-native languages for men]{
 		\includegraphics[width=0.45\linewidth]{Figure2a.eps}
@@ -802,19 +808,18 @@ that for men.
 	\label{fig:long-run_wage}
 \end{figure}
 
-The estimates for wage are rather stable as well. For Estonians, we
-see a slight downward trend of the effect of fluency in Russian whereas
-that of English becomes important in the late 1990s. For Russians, the
-importance of English seems to be sliding across the years, probably
-due to the increasing supply of these skills. For men, fluency in Estonian
+The wage effects show a similar smooth long-term trend.  For Estonians, we
+see a slowly fading effect of Russian fluency whereas
+English becomes important in the late 1990s.  For Russian men, fluency in Estonian
 has never been significantly associated with wage.
-The results are remarkably stable over the whole period, stressing
-the continuity of the peculiar labour market institutions,
-potentially workplace segregation, through the
-whole post-communist period. For women, however, we can see
-a slight increasing trend, suggesting that there is either less
+The results are remarkably stable over the whole period, indicating
+that the peculiar labour market institutions have been persistent for
+two decades.  However, we can see how Estonian language turned
+important in late 1990s, suggesting that there is either less
 workplace segregation or other need for the official language for
-the jobs commonly taken by women.
+the jobs commonly taken by women.  The
+importance of English seems to be falling over time for Russians, possibly
+due to the increasing supply of these skills. 
 
 
 \subsection{Does the Effect Differ by Age?}
