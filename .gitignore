@@ -16,5 +16,6 @@ figs/
 .Rprofile
 *~
 paper/*.pdf
+/*.pdf
 *.bak
 

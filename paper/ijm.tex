@@ -67,9 +67,10 @@
 \newcommand{\restrictions}{The sample period is from year 2000 to year 2012. Sample is limited to persons
 	25-55 year old.}
 \newcommand{\agerestrictions}{25-55 year olds only.}
-%Modified section numbering	
-\renewcommand{\thesection}{\arabic{section}.}
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}.}
+% Modified section numbering: removed dot at the end as this jumps
+% into the cross-references.
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
 
 \title{Language Skills in an Ethnically Segmented Labour market:
   Estonia 1989 -- 2012}
@@ -825,48 +826,48 @@ due to the increasing supply of these skills.
 \subsection{Does the Effect Differ by Age?}
 \label{sec:age_groups}
 
-We also estimate the effects separately by age groups and time in
-order to detect potential trends across the age groups and across ethnic groups
+As age is a central determinant how major economic and political
+reforms influence individual fates, 
+we also analyze the time trends by age groups
 (Table~\ref{tab:age_group_trend}).
-We look separately at 4 sub-periods: Early transition period
+We group the observation period into 4 sub-periods: Early transition period
 (1989--1995); First economic growth period (1996--1999);
 Economic boom, EU accession (2000--2007); and the recession
 (2008--2012).
-
-We use the same econometric specification as described in section \ref{sec:method}, the results presented here are derived using the model 2.
-
+We use the same econometric framework as described in section
+\ref{sec:method}, the results presented here are based on the specification 2.
 
 For ethnic Estonians, knowledge of Russian
 (Table~\ref{tab:age_group_trend}, upper panel) has become less
 important after its peak in the late 1990s. Notably, the
 association between wage and language skills are small in the
-young groups, the age groups where the Russian skills are also rapidly declining.
-Russian is still closely related to salary for
-older workers. The importance of English language skills fluctuates
-and declines slowly through the period, just the oldest male group
-(45-55) and the youngest female group (25-35) show a growing trend.
+young groups, the age groups where knowledge of that language
+declining rapidly.
+For older age groups, the estimates are larger but not statistically
+significant since the recession period.  English was not important
+during the early years of transition, but has been very closely
+associated with better pay since 1996.  It's importance seems to be
+falling though for the young and middle male groups while the oldest men
+(45-55) and the youngest women (25-35) show a growing trend.
 This potentially reflects both the changing supply and demand of
 English skills.
 
 Now we turn to ethnic Russians (lower panel in the table).  The association between Estonian skills and income shows no
-statistically significant results at all.  We'll return to this
-outcome below.
-The positive impact of Estonian language skills for Russian women
-increases
-over the sample period for the young group (25--35)
-and the prime age group (36--45).
-Good
-Estonian language knowledge is associated with approximately 10\% higher salary for Russian women for the boom in the 2000s. For the
-recession period, the figure is even close to 12\%. These age
-groups are the workers who were in their twenties or younger during
-the major political and economic transition in early 1990s. It
+statistically significant results at all.  This is the most unexpected
+result in our analysis and we'll return to this
+below in section~\ref{sec:segregation_analysis}.
+The impact of Estonian language skills for Russian women too, but
+since year 2000, we observe a sizable effect of approximately
+10\% for several cases.  However, standard errors are large and we
+cannot conclude that the effect is positive for all the age groups.
+The positive outcomes for women for the second decade in our analysis
 suggests that the previously segregated ``Estonian'' and ``Russian''
-economy are slowly becoming a more integrated one where ethnic
-Russians, at least women, with a good Estonian command can get well-paid jobs.
-In comparison, the estimates for English language fluency shows
-downward trend for all age groups for men and for women.  A likely
+economies are slowly becoming a more integrated one where ethnic
+Russians, at least women, with good Estonian command get better-paid
+jobs than those who cannot speak the language.
+In comparison, the estimates for English language show
+a downward trend for all age groups for both men and for women.  A likely
 cause is the increasing abundance of these skills over time.
-
 
 \begin{table}[htbp]
 	\centering
@@ -923,35 +924,40 @@ cause is the increasing abundance of these skills over time.
 	\label{tab:age_group_trend}
 \end{table}
 
-We repeat the exercise for unemployment models (using specification 2
-in
-Table~\ref{tab:unemployment_estimation_by_sex_and_ethnic_same_sample}).
+We repeat the exercise for unemployment models.
 However, as most of the results are not statistically significant, we
-do not present the tables here.
+do not report the results here.
 
 
 
 \section{Additional Evidence: Education and Workplace}
 \label{sec:segregation_analysis}
 
-The most interesting result in our analysis so far--the fact that
-Russian men earn virtuannly no Estonian language premium--warrants a
-deeper look at the data.  We split the Russian male wage-earners' data according to three
+The most surprising result in our analysis so far--the fact that
+Russian men earn virtually no Estonian language premium while women do--warrants a
+deeper look at the data.  We compute the average wage for the Russian male wage-earners
+along the three
 dimensions: Estonian language skills, residence in Tallinn metro area,
-and education.  However, to correct very strong trends through these
-years both in wage and language skills, we present the average
+and education.  The metropolitan area is one of the two major regions
+where the Russian-speaking population is concentrated, and it's
+booming economy may be very different from that in the North-East.
+Even more, while Russians form a large minority in and around Tallinn,
+they are in majority in the North-East.  
+In addition, to correct very strong wage and language skill trends through these
+years, we also present the average
 residuals from an OLS regression that explains log wage by year fixed
 effects (Table~\ref{tab:loc-lang-edu}). 
 \fxwarning{ot: Sven, can you redo this table?  Use exactly the same
   sample as you used.  Would also be good to put both et1 and et0 on
   the same row}
-The table show that the picture is in fact more complex.  We can see
+The table shows that the picture is in fact quite complex.  We can see
 that there is little to no gain from Estonian skills for the
 largest group, high-school educated workers.  Even more, outside of
-the metropolitan area, the the lowest and highest education groups
+the metropolitan area, the lowest and highest education groups
 have in fact negative language premium.  However, these two groups
 enjoy quite a noticeable premium in the Tallinn region.  The
 opposite-signed effects in for these two education groups suggests
+that a
 selective internal migration may play a role.
 
 % latex table generated in R 3.4.4 by xtable 1.8-2 package
@@ -982,11 +988,15 @@ selective internal migration may play a role.
 \end{table}
 
 We can conclude the table~\ref{tab:loc-lang-edu} that our
-most controversial finding, no positive effect of Estonian language
+most suprising finding, no positive effect of Estonian language
 skills for Russian men, is primarily driven by workers with
-high-school degree.
+high-school degree.  It also suggests that highly educated workers in
+the metropolitan area enjoy, in fact, a substantial language premium.
+However, this group is not very large.
 
-All previous results can be explained by two hypotheses: first, Russian--speaking men are working
+The previous results can be explained by two hypotheses: first,
+Russian--speaking men, at least those with high-school degree as their
+highest completed education, are working
 primarily in Russian language environment (ethnic segregation) while this is not true for
 women; and second, Russian-speaking men are working in jobs with
 little communication requirements (gender segregation).
@@ -996,8 +1006,7 @@ from 2008 Integration Monitor Survey.  We focus on
 two questions: ``which is the language of communication at your
 workplace?'' and ``which languages do you need at work''.  The first
 question addresses the ethnic segregation while the second focuses on
-the need of communication.  As very few individuals work in English
-environment, we only look for Estonian as the communication language.
+the need of communication.  
 
 \begin{table}[t]
 	\centering
@@ -1022,9 +1031,11 @@ environment, we only look for Estonian as the communication language.
 Table~\ref{tab:environment_descriptive} shows the proportion of
 Russian respondents who use Estonian as the main communication language at work, and
 who need Estonian and English at work.  As we see, women are more likely to
-use Estonian than men while the opposite is true for English.
-Table~\ref{tab:environment_model} presents the regression results when
-controlling for other
+use Estonian while the opposite is true for English.
+Table~\ref{tab:environment_model} presents the regression results
+where we estimate the likelihood of having the need and using Estonian at work
+while
+controlling for gender and other individual
 characteristics, including education and geographic location.
 
 \begin{table}[t]
@@ -1056,7 +1067,7 @@ The table indicates that Russian women need Estonian 26 percentage
 points more at work than Russian men.  The table also suggests that
 Russian women are 16 percentage points more likely to be working in
 Estonian-speaking environment when controlling for other factors.
-Both estimates are statistically significant (at 5\% and 10 \% level
+Both figures are statistically significant (at 5\% and 10 \% level
 respectively), but not precisely estimated.  We can also see that
 college education is associated by much more Estonian need and usage,
 but in regions where Russian speakers are concentrated, the capital
@@ -1065,7 +1076,7 @@ gender difference is visible for English needs.
 
 In summary, this dataset supports the previous hypothesis: Russian women are
 working in less segregated environment where Estonian is the main
-communication language, and they need Estonian for other reasons as
+communication language, and they need Estonian at work for other reasons as
 well.  Gender differences in English usage are not statistically
 significant.
 \fxwarning{ot: let's remove the cv.ee stuff.  Or substantially improve
