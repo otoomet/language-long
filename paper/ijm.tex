@@ -969,6 +969,7 @@ effects (Table~\ref{tab:loc-lang-edu}).
   sample as you used.  Would also be good to put both et1 and et0 on
   the same row}
 \fxwarning{SKB: Will try. Although I still do not understand, what the residual is telling me and why the wages are so high. Are the wages in EEK? What does ET stand for? The table needs more explanation or at least a proper legend.}
+
 The table shows that the picture is in fact quite complex.  We can see
 that there is little to no gain from Estonian skills for the
 largest group, high-school educated workers.  Even more, outside of
@@ -1005,9 +1006,49 @@ selective internal migration may play a role.
   \end{tabular}
   \label{tab:loc-lang-edu}
 \end{table}
+\fxwarning{SKB: Copied and modified table above. }
+\begin{table}[ht]
+	\centering
+	\caption{Average wage and time-trend corrected language parameter across
+		location and education groups for Russian men}
+	\begin{tabular}{lrlrrr}
+		\toprule
+		Tallinn & education & ET & wage & parameter & \# obs \\ 
+		\midrule
+		Tallinn & $<$ HS & 0 & 334 & -0.16\onepc & 255 \\ 
+		Tallinn & $<$ HS & 1 & 424 & -0.08 & 219 \\ 
+%		Tallinn & HS     & 0 &476 & 0.05 & 1292 \\ 
+		Tallinn & HS      & 1 & 512 & -0.05 \fivepc & 1296 \\ 
+		Tallinn & college & 0 & 520 & -0.02 & 212 \\ 
+		Tallinn & college & 1 & 737 & 0.05 & 518 \\ 
+		Ida-Viru & $<$ HS & 0 & 396 &  -0.20\onepc & 379 \\ 
+		Ida-Viru & $<$ HS & 1 & 269 & -0.23\onepc & 20 \\ 
+		Ida-Viru & HS     & 0 & 337 & -0.23\onepc & 1889 \\ 
+		Ida-Viru & HS      & 1 & 368 & -0.21\onepc & 252 \\ 
+		Ida-Viru & college & 0 & 451 & -0.07 & 246 \\ 
+		Ida-Viru & college & 1 & 493 & -0.06 & 154 \\ 
+		other   & $<$ HS & 0 & 279 & -0.23\onepc & 83 \\ 
+		other   & $<$ HS & 1 & 334 & -0.19\onepc & 212 \\ 
+		other   & HS     & 0 & 378& -0.13\onepc & 353 \\ 
+		other   & HS      & 1 & 389 & -0.09\onepc & 713\\ 
+		other   & college & 0 & 788 & 0.03 & 32\\ 
+		other   & college & 1 & 414 & -0.11 & 110 \\ 
+		\bottomrule
+	\end{tabular}
+	\label{tab:loc-lang-edu_m3}
+\end{table}
+
+\fxwarning{SKB: Added graph showing the same parameter estimates. Maybe a better formatted graph like this shows the story better than a table}
+\begin{figure}[hbtp]
+	\centering
+	\caption{Coefficient plot of Model 3 for Russian Men separated by Region and Education}
+	\label{fig:russianmenlanguagecoefsm3}
+	\includegraphics[width=1.0\linewidth]{russian_men_language_coefs_m3}
+\end{figure}
+
 
 We can conclude the table~\ref{tab:loc-lang-edu} that our
-most suprising finding, no positive effect of Estonian language
+most surprising finding, no positive effect of Estonian language
 skills for Russian men, is primarily driven by workers with
 high-school degree.  It also suggests that highly educated workers in
 the metropolitan area enjoy, in fact, a substantial language premium.
