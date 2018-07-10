@@ -529,7 +529,8 @@ assumptions in the corresponding binary choice models.\footnote{The
 Similarly, we estimate the effect of language skills on wage by
 OLS. 
 
-We estimate the basic model in the following form:
+We describe the outcome of individual $i$ belonging to group $g$ (either Estonian
+or Russian) at year $t$ as
 \begin{equation}
 	\label{eq:specification}
 	\begin{split}
@@ -538,33 +539,29 @@ We estimate the basic model in the following form:
 		\upsilon_{t}^{g} + \epsilon_{it}^{g},
 	\end{split}
 \end{equation}
-where $y_{it}^{g}$ is the outcome (either unemployment indicator
-or logarithm of net monthly wage)
-of individual $i$ in year $t$ from ethnic group $g$ (either Estonian
-or Russian); $\vec{X}$ are the other individual
+where $y$ is the outcome (either unemployment indicator
+or logarithm of net monthly wage), $\vec{X}$ are the other individual
 characteristics; $\vec{L}$ is the vector of
 language skill descriptors, $\eta_{i}^{g}$ is the individual-specific effect, $\upsilon_{t}^{g}$ are the year dummies and $\epsilon_{it}^{g}$
 is the idiosyncratic error term. 
 \fxerror{ot: what's the eta term?  do you do random effects?}
+\fxerror{ot: why does $\upsilon$ have index $g$?}
 As we use panel data, we cluster the
-standard errors on individuals.  When analysing the time trend, we
-replace the main language effects in~\eqref{eq:specification} by the
-corresponding interactions
-\fxwarning{ot: ensure this is what we do :-)}
-\begin{align}
-	\label{eq:time_interaction}
-	\beta_{RUS,t} \cdot RUS_{it} \cdot \upsilon_{t} +
-	\beta_{EST,t} \cdot EST_{it} \cdot \upsilon_{t} +
-	\beta_{ENG,t} \cdot ENG_{it} \cdot \upsilon_{t}.
-\end{align}
-
+standard errors on individuals.  When analysing the long-term time
+trend, we use the same specification (without year fixed effects) to
+estimate separate models for each individual year.
 
 We estimate three models that differ in terms of the number of
-control variables. The first one only includes the language skills
-and year dummies. The second one also includes individual
-characteristics (age, education) and family descriptors (marital status, having kids up to 17 years old) and county of residence.
-Finally, the third model also adds industry, occupation, and other
-workplace descriptors.  Note that in case of unemployment probability,
+control variables. The first specification only includes the language skills
+and year dummies.  It describes the ``raw'' effect of language skills
+on outcomes after controlling for substantial time trends in our data.
+The second specification additionally includes individual
+characteristics (age, education) and family descriptors (marital
+status, indicator for interethnic marriage, having kids up to 17 years
+old) and county of residence.  
+Finally, the third specification also adds industry, occupation, and other
+workplace descriptors.
+Note that in case of unemployment probability,
 we only estimate the first two models.
 
 
@@ -1096,12 +1093,12 @@ Our analysis supports \citet{YaoandOurs2015}, and \citet{Lindemann2013} findings
 the labour market is segmented between ethnic and gender lines.
 However, we find that ethnic segregation is less prevalent in the male
 labour market.
-We suspect that for majority of Russian speaking men, Estonian
+This suggests for majority of Russian speaking men, Estonian
 language gives a distinct advantage by facilitating hiring by
-Estonian-dominated employers.  However, these
-jobs are associated with little career mobility.
-(\citet{leppik+vihalemm2015JofBaltStud} reach a similar conclusion
-based on Immigrant Population Survey).  There is also
+Estonian-dominated employers.  However, our outcome also supports 
+\citet{leppik+vihalemm2015JofBaltStud} conclusion that
+these
+jobs are associated with little career mobility.  There is also
 anecdotal evidence suggesting that offices are
 typically manned by ethnic Estonians while manufacturing units have a
 large share of Russian workers.
