@@ -203,6 +203,23 @@ focus on a single year and English language only.
 \citet{YaoandOurs2015} only analyse the role of Dutch language
 on labour market performance in Netherlands.  
 \fxwarning{ot:add CEE stuff here?}
+\fxwarning{SKB: Let's collect first enough material and then decide, but I can start adding here some notes from \cite{Kahanec2009,Kahanec2010}.}
+%Start here CEE stuff for now
+\cite{Kahanec2009} provide an overview about \enquote{the roles of foreign origin and citizenship in the labor markets of Eastern and Eestern[sic] Member States of the EU} \dots and use the EU Survey of Income and Living Conditions (EU-SILC) dataset.
+They\enquote{ mapped and compared the roles of foreign origin and citizenship for labor market performance in Eastern and Western EU Member States.}
+Using Oaxaca and Fairlie decompositions, they show that there is native/non-native divide in the national labour markets \dots.
+They find that \enquote{both foreign origin and citizenship remain important barriers to non-native labor market integration}
+\enquote{In Estonia and Latvia, in particular, employment
+	policies seem to be most relevant for non-immigrant non-citizens. Once employed,
+	non-nativity may play a less negative role in the labor market for some groups,
+	although labor market segmentation remains a significant issue.}
+\fxnote{\cite{Kahanec2009} essentially confirms your results in \cite{Leping2008,Toomet2011}}
+\cite{Kahanec2010} show that \enquote{the labor market situation of ethnic minorities in the European
+	Union. Facing a serious measurement challenge and lacking adequate data, we apply
+	several measures of ethnicity and examine various data sources as well as secondary
+	evidence. We find significant gaps between ethnic minority and majority populations in
+	terms of labor market outcomes.}
+%Continue with existing stuff
 In case of Estonia,
 \citet{Toomet2011} shows that the majority language gives little wage
 premium for minority men.  However, he analyses neither women, nor
@@ -542,10 +559,12 @@ or Russian) at year $t$ as
 where $y$ is the outcome (either unemployment indicator
 or logarithm of net monthly wage), $\vec{X}$ are the other individual
 characteristics; $\vec{L}$ is the vector of
-language skill descriptors, $\eta_{i}^{g}$ is the individual-specific effect, $\upsilon_{t}^{g}$ are the year dummies and $\epsilon_{it}^{g}$
+language skill descriptors, $\eta_{i}^{g}$ is the individual-specific effect, $\upsilon_{t}$ are the year dummies and $\epsilon_{it}^{g}$
 is the idiosyncratic error term. 
 \fxerror{ot: what's the eta term?  do you do random effects?}
+\fxerror{SKB: Eta should be the individual specific random effect. We cluster the standard errors at the individual level, hence estimate a random-effect model, although not a panel random-effect model.}
 \fxerror{ot: why does $\upsilon$ have index $g$?}
+\fxerror{SKB: Should be an error, probably index $g$ was just added to everything.}
 As we use panel data, we cluster the
 standard errors on individuals.  When analysing the long-term time
 trend, we use the same specification (without year fixed effects) to
@@ -557,12 +576,13 @@ and year dummies.  It describes the ``raw'' effect of language skills
 on outcomes after controlling for substantial time trends in our data.
 The second specification additionally includes individual
 characteristics (age, education) and family descriptors (marital
-status, indicator for interethnic marriage, having kids up to 17 years
+status, indicator for inter-ethnic marriage, having kids up to 17 years
 old) and county of residence.  
 Finally, the third specification also adds industry, occupation, and other
 workplace descriptors.
 Note that in case of unemployment probability,
 we only estimate the first two models.
+\fxnote{Actually, I tried to estimate Model 3 as well for unemployment probability. The language coefficients become insignificant after controlling for industry and occupation. Hence, Estonian language fluency lowers the unemployment probability only if workplace characteristics are ignored. Since nobody questioned this result during review, we should maybe not mention it now. }
 
 
 \section{Results}
@@ -948,6 +968,7 @@ effects (Table~\ref{tab:loc-lang-edu}).
 \fxwarning{ot: Sven, can you redo this table?  Use exactly the same
   sample as you used.  Would also be good to put both et1 and et0 on
   the same row}
+\fxwarning{SKB: Will try. Although I still do not understand, what the residual is telling me and why the wages are so high. Are the wages in EEK? What does ET stand for? The table needs more explanation or at least a proper legend.}
 The table shows that the picture is in fact quite complex.  We can see
 that there is little to no gain from Estonian skills for the
 largest group, high-school educated workers.  Even more, outside of
@@ -1079,6 +1100,10 @@ well.  Gender differences in English usage are not statistically
 significant.
 \fxwarning{ot: let's remove the cv.ee stuff.  Or substantially improve
 that.}
+\fxwarning{SKB: You removed the cv.ee already? I only see stuff using data from Integration Monitor Survey 2008. I did not do these analyses nor do I have the data to repeat the analyses for the latest edition of the Integration Monitor Survey.
+The cv.ee might have been interesting or useful, if it was done properly documented. But that might warrant another section or even another paper. See \cite{fabo+2017E} for more on that.
+}
+
 
 \section{Discussion and Concluding Remarks}
 \label{sec:discussion}
