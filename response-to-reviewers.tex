@@ -60,6 +60,13 @@ references to 50 items.
 \item When submitting your revised manuscript, you will be able to respond to the comments made by the referee(s) in the space provided.  You can use this space to document any changes you make to the original manuscript.  In order to expedite the processing of the revised manuscript, please be as specific as possible in your response to the referee(s).
 \end{enumerate}
 
+\begin{response}
+  At a reviewers request, we have added the full regression tables in
+  Appendix.  We agree these figures are valuable, in particular in the
+  light of the striving toward the replicable research in the recend
+  years, but we think they fit better in an online supplement.
+\end{response}
+
 \section{Referee 1}
 
 \subsection{Main comments:}
@@ -148,21 +155,24 @@ is included in your sample.
   should be the equal. Otherwise it is difficult to conclude whether the
   changes in the coefficients are coming from the addition of more
   controls or form the change in the size of the estimation sample.
+
   \begin{response}
     Now we report the models with identical results.  The original
     (very similar)
     results are still available in Appendix.
   \end{response}
 
-\item 
-- In the paper, you are only showing the results of the variables of
-interest. I suggest to provide tables including all coefficients (not
-the year dummies) in the Appendix. It might be interesting to see how
-the coefficients of the control variables change across the different
-models.
-\debug{SKB: Will add them after I figured out how to present the results nicely formatted. It boils down to finding the right options for the \enquote{estout} or the \enquote{outtex/outreg} user provided package in Stata. I could do the formatting in Excel myself, but I prefer the Stata solution. }
-\debug{SKB: I included a first try in the appendix, which is still not perfect. The labels for the variables are not existing yet or not correct. The tables are not linked yet to the main text.}
-\debug{SKB: Should I include tables for unemployment as well? This would blow up the number of pages even further. I could drop the standard errors to save space. Let me know what would be best.}
+\item In the paper, you are only showing the results of the variables of
+  interest. I suggest to provide tables including all coefficients (not
+  the year dummies) in the Appendix. It might be interesting to see how
+  the coefficients of the control variables change across the different
+  models.
+
+  \begin{response}
+    We have added the full wage results in Appendix.  We think these
+    tables would be more suitable for an online supplement.
+    \fxerror{ot: if we do wage, we should also do unemployment}
+  \end{response}
 \item 
 - All tables: Be consistent in the description of your tables. The
 table notes and the labels for e.g., "observations", are inconsistent
