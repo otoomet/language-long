@@ -562,38 +562,35 @@ assumptions in the corresponding binary choice models.\footnote{The
 Similarly, we estimate the effect of language skills on wage by
 OLS. 
 
-We describe the outcome of individual $i$ belonging to group $g$ (either Estonian
-or Russian) at year $t$ as
+We describe the outcome of individual $i$ at year $t$ as
 \begin{equation}
 	\label{eq:specification}
 	\begin{split}
-		y_{it} ^{g} = &\: \alpha^{g}{}' \vec{X}_{it}^{g} + \vec{\beta}^{g}{}' \vec{L}_{it}^{g} +
-		\eta_{i}^{g} +
-		\upsilon_{t} + \epsilon_{it}^{g},
+		y_{it} = &\: \vec{\alpha}{}' \vec{X}_{it} + \vec{\beta}{}' \vec{L}_{it} +
+		\eta_{i} +
+		\upsilon_{t} + \epsilon_{it},
 	\end{split}
 \end{equation}
 where $y$ is the outcome (either unemployment indicator
-or logarithm of net monthly wage), $\vec{X}$ are the other individual
-characteristics; $\vec{L}$ is the vector of
-language skill descriptors, $\eta_{i}^{g}$ is the individual-specific effect, $\upsilon_{t}$ are the year dummies and $\epsilon_{it}^{g}$
-is the idiosyncratic error term. 
-\fxerror{ot: what's the eta term?  do you do random effects?}
-\fxerror{SKB: Eta should be the individual specific random effect. We cluster the standard errors at the individual level, hence estimate a random-effect model, although not a panel random-effect model.}
-\fxerror{ot: why does $\upsilon$ have index $g$?}
-\fxerror{SKB: Should be an error, probably index $g$ was just added to everything.}
+or logarithm of net monthly wage), $\vec{X}$ are the individual and
+workplace descriptors; $\vec{L}$ is the vector of
+language skill descriptors, $\eta_{i}$ is the individual random effect, $\upsilon_{t}$ are the year dummies and $\epsilon_{it}$
+is the idiosyncratic error term.  We estimate separate models for
+Estonians and Russians.
+\fxnote{ot: if you do random effects--do you still have to cluster?}
 As we use panel data, we cluster the
 standard errors on individuals.  When analysing the long-term time
 trend, we use the same specification (without year fixed effects) to
 estimate separate models for each individual year.
 
-We estimate three models that differ in terms of the number of
+We estimate three models that differ in
 control variables. The first specification only includes the language skills
 and year dummies.  It describes the ``raw'' effect of language skills
 on outcomes after controlling for substantial time trends in our data.
 The second specification additionally includes individual
 characteristics (age, education) and family descriptors (marital
 status, indicator for inter-ethnic marriage, having kids up to 17 years
-old) and county of residence.  
+old), and county of residence.  
 Finally, the third specification also adds industry, occupation, and other
 workplace descriptors.
 Note that in case of unemployment probability,
