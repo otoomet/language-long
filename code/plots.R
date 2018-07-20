@@ -34,12 +34,12 @@ maleWageF <- function(data, years=2000:2012, ages=25:50) {
    subset <- data[sex == 1 & !is.na(wage) & !is.na(residenceCounty) & nonEst,
                   .(wage, estLevel, engLevel, residenceCounty, edu, age, date)][
       wage > 0, ][
-    , metro := residenceCounty == 37][
+    , metro := sapply(as.character(residenceCounty), function(c) switch(c, "37"="Tallinn", "44"="Other", "Other"))][
+    , edu := sapply(as.character(edu), function(c) switch(c, "<=basic"="< HS", "highSchool"="HS", college="college degree"))][
+    , edu := factor(edu, levels=c("< HS", "HS", "College Degree"))][
     , et := estLevel %in% c("1", "2", "home")][
     , en := engLevel %in% c("1", "2", "home")][
-    , edu := factor(edu, levels=c("<=basic", "highSchool", "college"))][
       year(date) %in% years & age >= min(ages) & age <= max(ages), ]
-   subset[, metro := ifelse(metro, "metro", "other")]
    deg <- length(unique(years)) - 1
    lm(log(wage) ~ poly(year(date), deg) + metro*edu*et, data=subset) %>%
       summary() %>%
@@ -74,5 +74,9 @@ maleWageF <- function(data, years=2000:2012, ages=25:50) {
       print()
    hlay <- matrix(c(1,2,3,3,3), nrow=1)
    gridExtra::grid.arrange(plain, metro, edu, ncol=3, layout_matrix=hlay)
-   t3
+   res <- dcast(t3, metro + edu ~ et, value.var=c("residual", "n"))[
+    , `:=`(n = n_FALSE + n_TRUE, n_FALSE = NULL, n_TRUE = NULL)]
+   setnames(res, c("residual_FALSE", "residual_TRUE"), c("ET0", "ET1"))
+   res[, premium := ET1 - ET0]
+   res[, .(metro, edu, n, ET0, ET1, premium)]
 }

@@ -40,6 +40,7 @@
 \usepackage[colorlinks=true, urlcolor=blue, citecolor=black, linkcolor=black]{hyperref}
 \usepackage[noabbrev,capitalise]{cleveref}
 
+\DeclareUnicodeCharacter{2010}{-}% support older LaTeX versions
 \thanksfootextra{}{\hfill}
 \setlength{\thanksmargin}{1em}
 \setlength{\thanksmarkwidth}{0.75em}
@@ -331,7 +332,7 @@ above-mentioned ``one-sided bilingualism'' slowly started turning
 around.  The universities quickly moved to Estonian-only curriculum,
 Estonian language become a large-scale compulsory subject in Russian
 schools while teaching Russian in Estonian-language schools declined.
-Since 2007, all Russian high-schools have to teach part of the
+Since 2007, all Russian high schools have to teach part of the
 curriculum in Estonian \citep{lindemann+saar2011Russian2ndGeneration}.
 
 According to the report of the Ministry of Education and Research the number
@@ -976,26 +977,24 @@ do not report the results here.
 
 The most surprising result in our analysis so far--the fact that
 Russian men earn virtually no Estonian language premium while women do--warrants a
-deeper look at the data.  We compute the average wage for the Russian male wage-earners
+deeper look at the data.  We split the average wage for the Russian male wage-earners
 along the three
-dimensions: Estonian language skills, residence in Tallinn metro area,
-and education.  The metropolitan area is one of the two major regions
+dimensions: Estonian language skills (\emph{EST 0} and \emph{EST 1}),
+residence in Tallinn metro area (\emph{Tallinn} and \emph{Other}),
+and education (\emph{< HS}, \emph{HS}, \emph{College Degree}).  The metropolitan area is one of the two major regions
 where the Russian-speaking population is concentrated, and it's
-booming economy may be very different from that in the North-East.
+booming economy may be very different from the other such region, the
+North-East (Ida-Virumaa), and the rest of the country.
 Even more, while Russians form a large minority in and around Tallinn,
 they are in majority in the North-East.  
-In addition, to correct very strong wage and language skill trends through these
-years, we also present the average
-residuals from an OLS regression that explains log wage by year fixed
-effects (Table~\ref{tab:loc-lang-edu}). 
-\fxwarning{ot: Sven, can you redo this table?  Use exactly the same
-  sample as you used.  Would also be good to put both et1 and et0 on
-  the same row}
-\fxwarning{SKB: Will try. Although I still do not understand, what the residual is telling me and why the wages are so high. Are the wages in EEK? What does ET stand for? The table needs more explanation or at least a proper legend.}
+In order to correct for the strong wage and language skill trends
+through the observation period, we do not present the average wage,
+but instead the respective OLS residuals where we explain the wage by year fixed
+effects and include no other explanatory variables (Table~\ref{tab:loc-lang-edu}). 
 
-The table shows that the picture is in fact quite complex.  We can see
+The table shows that the picture is in fact complex.  We can see
 that there is little to no gain from Estonian skills for the
-largest group, high-school educated workers.  Even more, outside of
+largest group of workers, those with a high school degree.  Even more, outside of
 the metropolitan area, the lowest and highest education groups
 have in fact negative language premium.  However, these two groups
 enjoy quite a noticeable premium in the Tallinn region.  The
@@ -1009,81 +1008,44 @@ selective internal migration may play a role.
   \centering
   \caption{Average wage and time-trend corrected residual across
     location and education groups for Russian men}
-  \begin{tabular}{lrlrrr}
+  \begin{tabular}{llrrrr}
     \toprule
-    Tallinn & education & ET & wage & residual & \# obs \\ 
+    & & &\multicolumn{2}{c}{Log Wage}\\
+    Location & Education & \# Observations & EST 0 & EST 1 & Premium\\
     \midrule
-    Tallinn & $<$ HS & 0 & 4313.38 & -0.19 & 255 \\ 
-    Tallinn & $<$ HS & 1 & 5351.11 & -0.05 & 219 \\ 
-    Tallinn & HS     & 0 & 5803.21 & 0.05 & 1292 \\ 
-    Tallinn & HS      & 1 & 5666.77 & 0.05 & 1296 \\ 
-    Tallinn & college & 0 & 6562.57 & 0.16 & 212 \\ 
-    Tallinn & college & 1 & 8453.14 & 0.30 & 518 \\ 
-    other   & $<$ HS & 0 & 3877.84 & -0.13 & 461 \\ 
-    other   & $<$ HS & 1 & 4496.62 & -0.18 & 230 \\ 
-    other   & HS     & 0 & 4838.65 & -0.09 & 2233 \\ 
-    other   & HS      & 1 & 5351.51 & -0.05 & 960 \\ 
-    other   & college & 0 & 6283.38 & 0.17 & 278 \\ 
-    other   & college & 1 & 6072.06 & 0.13 & 263 \\ 
+    Tallinn & $<$ HS & 399 & -0.20 & -0.01 & 0.19 \\ 
+    Tallinn & HS & 2164 & 0.07 & 0.04 & -0.03 \\ 
+    Tallinn & College Degree & 610 & 0.15 & 0.30 & 0.15 \\ 
+    Other & $<$ HS & 501 & -0.12 & -0.12 & -0.01 \\ 
+    Other & HS & 2658 & -0.10 & -0.07 & 0.03 \\ 
+    Other & College Degree & 429 & 0.17 & 0.11 & -0.06 \\ 
     \bottomrule
   \end{tabular}
+  \begin{flushleft}
+    Notes: \emph{Log Wage} refers to regression residual where log
+    wage is explained by year fixed effects.  \emph{EST0} and
+    \emph{EST 1} are mean values for those who cannot, and who can,
+    speak Estonian; $\text{Premium} = \text{EST 1} - \text{EST 0}$.
+    Education level \emph{< HS} refers to less than high school
+    degree, \emph{HS} is the high school degree as the highest
+    completed education level.
+  \end{flushleft}
   \label{tab:loc-lang-edu}
 \end{table}
-\fxwarning{SKB: Copied and modified table above. }
-\begin{table}[ht]
-	\centering
-	\caption{Average wage and time-trend corrected language parameter across
-		location and education groups for Russian men}
-	\begin{tabular}{lrlrrr}
-		\toprule
-		Tallinn & education & ET & wage & parameter & \# obs \\ 
-		\midrule
-		Tallinn & $<$ HS & 0 & 334 & -0.16\onepc & 255 \\ 
-		Tallinn & $<$ HS & 1 & 424 & -0.08 & 219 \\ 
-%		Tallinn & HS     & 0 &476 & 0.05 & 1292 \\ 
-		Tallinn & HS      & 1 & 512 & -0.05 \fivepc & 1296 \\ 
-		Tallinn & college & 0 & 520 & -0.02 & 212 \\ 
-		Tallinn & college & 1 & 737 & 0.05 & 518 \\ 
-		Ida-Viru & $<$ HS & 0 & 396 &  -0.20\onepc & 379 \\ 
-		Ida-Viru & $<$ HS & 1 & 269 & -0.23\onepc & 20 \\ 
-		Ida-Viru & HS     & 0 & 337 & -0.23\onepc & 1889 \\ 
-		Ida-Viru & HS      & 1 & 368 & -0.21\onepc & 252 \\ 
-		Ida-Viru & college & 0 & 451 & -0.07 & 246 \\ 
-		Ida-Viru & college & 1 & 493 & -0.06 & 154 \\ 
-		other   & $<$ HS & 0 & 279 & -0.23\onepc & 83 \\ 
-		other   & $<$ HS & 1 & 334 & -0.19\onepc & 212 \\ 
-		other   & HS     & 0 & 378& -0.13\onepc & 353 \\ 
-		other   & HS      & 1 & 389 & -0.09\onepc & 713\\ 
-		other   & college & 0 & 788 & 0.03 & 32\\ 
-		other   & college & 1 & 414 & -0.11 & 110 \\ 
-		\bottomrule
-	\end{tabular}
-	\label{tab:loc-lang-edu_m3}
-\end{table}
-
-\fxwarning{SKB: Added graph showing the same parameter estimates. Maybe a better formatted graph like this shows the story better than a table}
-\begin{figure}[hbtp]
-	\centering
-	\caption{Coefficient plot of Model 3 for Russian Men separated by Region and Education}
-	\label{fig:russianmenlanguagecoefsm3}
-	\includegraphics[width=1.0\linewidth]{russian_men_language_coefs_m3}
-\end{figure}
-
 
 We can conclude the table~\ref{tab:loc-lang-edu} that our
 most surprising finding, no positive effect of Estonian language
 skills for Russian men, is primarily driven by workers with
-high-school degree.  It also suggests that highly educated workers in
+high school degree.  It also suggests that highly educated workers in
 the metropolitan area enjoy, in fact, a substantial language premium.
 However, this group is not very large.
 
 The previous results can be explained by two hypotheses: first,
-Russian--speaking men, at least those with high-school degree as their
-highest completed education, are working
+Russian--speaking men, at least those with high school degree as their
+highest completed education level, are working
 primarily in Russian language environment (ethnic segregation) while this is not true for
 women; and second, Russian-speaking men are working in jobs with
 little communication requirements (gender segregation).
-
 To shed some additional light on these hypotheses, we use data
 from 2008 Integration Monitor Survey.  We focus on
 two questions: ``which is the language of communication at your
@@ -1115,8 +1077,8 @@ Table~\ref{tab:environment_descriptive} shows the proportion of
 Russian respondents who use Estonian as the main communication language at work, and
 who need Estonian and English at work.  As we see, women are more likely to
 use Estonian while the opposite is true for English.
-Table~\ref{tab:environment_model} presents the regression results
-where we estimate the likelihood of having the need and using Estonian at work
+Table~\ref{tab:environment_model} presents the corresponding regression results
+where we estimate the likelihood of having the need, and using, Estonian at work
 while
 controlling for gender and other individual
 characteristics, including education and geographic location.
@@ -1175,7 +1137,7 @@ The cv.ee might have been interesting or useful, if it was done properly documen
 We document that all analyzed language skills are associated with
 unemployment and wage, however in a different way. Our most
 intriguing observation is that the largest group of
-Russian men, high-school graduates, earn virtually no income premium if fluent in Estonian,
+Russian men, high school graduates, earn virtually no income premium if fluent in Estonian,
 the majority and the official language of the country, while ability
 to speak the language is related to a substantially
 lower unemployment rate.
