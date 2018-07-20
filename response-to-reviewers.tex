@@ -60,6 +60,13 @@ references to 50 items.
 \item When submitting your revised manuscript, you will be able to respond to the comments made by the referee(s) in the space provided.  You can use this space to document any changes you make to the original manuscript.  In order to expedite the processing of the revised manuscript, please be as specific as possible in your response to the referee(s).
 \end{enumerate}
 
+\begin{response}
+  At a reviewers request, we have added the full regression tables in
+  Appendix.  We agree these figures are valuable, in particular in the
+  light of the striving toward the replicable research in the recend
+  years, but we think they fit better in an online supplement.
+\end{response}
+
 \section{Referee 1}
 
 \subsection{Main comments:}
@@ -123,61 +130,80 @@ references to 50 items.
   estimating the time trend is very short.
 
   \begin{response}
-    We have improved the description of the model and related variables.
+    We have improved and simplified the description of the model and related variables.
   \end{response}
-  \fxwarning{ot: check my comments for the model}
+  \fxwarning{ot: should you cluster if you do random effects?}
 \item - The tables and figures should have notes that explain in more
   detail what is shown in the respective table and figure. For
   instance, the table notes should contain the included control
   variables, the sample period and the age restriction applied.
-  \debug{SKB: I added this information to the tables and the figures. The descriptions might need some polishing still.}
-\item 
-- Page 4: You write that you are only analysing individuals who are
+
+  \begin{response}
+    We have improved the captions and notes.
+  \end{response}
+
+\item page 4: You write that you are only analysing individuals who are
 working or actively looking for a job, but in line 35 on the same page
 you write that inactivity is one of the included labour market
 outcomes. Please clarify this and be clear in your description of what
 is included in your sample.
-\item 
-  \debug{ot: let's make it equal (i.e. remove all observations with
-    any of the variables missing.  Add a footnote that when we
-    included all the variables, we still got the same results.}
-\debug{SKB: I estimated the models and updated the tables with occupation added to Model 3. Added footnote linking to original tables with \enquote{unrestricted} observations}
-  The sample size for different specification of the same analysis
-should be the equal. Otherwise it is difficult to conclude whether the
-changes in the coefficients are coming from the addition of more
-controls or form the change in the size of the estimation sample.
-\item 
-- In the paper, you are only showing the results of the variables of
-interest. I suggest to provide tables including all coefficients (not
-the year dummies) in the Appendix. It might be interesting to see how
-the coefficients of the control variables change across the different
-models.
-\debug{SKB: Will add them after I figured out how to present the results nicely formatted. It boils down to finding the right options for the \enquote{estout} or the \enquote{outtex/outreg} user provided package in Stata. I could do the formatting in Excel myself, but I prefer the Stata solution. }
-\debug{SKB: I included a first try in the appendix, which is still not perfect. The labels for the variables are not existing yet or not correct. The tables are not linked yet to the main text.}
-\debug{SKB: Should I include tables for unemployment as well? This would blow up the number of pages even further. I could drop the standard errors to save space. Let me know what would be best.}
-\item 
-- All tables: Be consistent in the description of your tables. The
+
+\begin{response}
+  We have removed the erroneous mentioning of inactivity 
+\end{response}
+\item  The sample size for different specification of the same analysis
+  should be the equal. Otherwise it is difficult to conclude whether the
+  changes in the coefficients are coming from the addition of more
+  controls or form the change in the size of the estimation sample.
+
+  \begin{response}
+    Now we report the models with identical results.  The original
+    (very similar)
+    results are still available in Appendix.
+  \end{response}
+
+\item In the paper, you are only showing the results of the variables of
+  interest. I suggest to provide tables including all coefficients (not
+  the year dummies) in the Appendix. It might be interesting to see how
+  the coefficients of the control variables change across the different
+  models.
+
+  \begin{response}
+    We have added the full wage results in Appendix.  We think these
+    tables would be more suitable for an online supplement.
+    \fxerror{ot: if we do wage, we should also do unemployment}
+  \end{response}
+\item All tables: Be consistent in the description of your tables. The
 table notes and the labels for e.g., "observations", are inconsistent
 across the different tables. 
-\debug{SKB: Fixed. Changed obs to Observations in tables}
-\item
-  \debug{ot: this was because of both 'B. Chiswick' and
-    'B. R. Chiswick' in the bibtex file, and bibtex wanted to
-    distinguish between these two guys.}
- Page 1: To cite Chiswick you are using different versions
+
+\begin{response}
+  We now consistently talk about ``observations''.
+\end{response}
+
+\item Page 1: To cite Chiswick you are using different versions
 (B. Chiswick and B. R. Chiswick).
 
 \begin{response}
   We have corrected the different references.
 \end{response}
 
-\item 
-- Page 2, line 58: Not the unemployment rate, but the probability of
-being unemployed is reduced.
-\debug{SKB: Got fixed by Svetlana I think.}
-\item 
-- Page 3, lines 46-50: You are using a comma as the decimal separator, but in all your tables you are using a point. Please use a point everywhere. 
-\debug{SKB: Fixed by someone.}
+\item Page 2, line 58: Not the unemployment rate, but the probability of
+  being unemployed is reduced.
+
+  \begin{response}
+    We now use ``unemployment probability'' when talking about
+    individual outcomes and leave ``unemployment rate'' solely for
+    describing group outcomes.
+  \end{response}
+
+\item Page 3, lines 46-50: You are using a comma as the decimal separator, but in all your tables you are using a point. Please use a point everywhere. 
+
+  \begin{response}
+    We now consistently use period as decimal separator and comma as
+    thousands' separator.
+  \end{response}
+
 \end{enumerate}
 
 
@@ -204,9 +230,12 @@ being unemployed is reduced.
   one of the extensions that this paper is making the inclusion of
   women and namely how their effects differ from males and previous
   literature. 
-\item 
-\debug{OT: seems like I have to address this.}
-In the Discussion and Concluding Remarks section they state that
+
+  \begin{response}
+    No response neede here.
+  \end{response}
+
+\item In the Discussion and Concluding Remarks section they state that
   “The lower end labour market, associated with frequent unemployment,
   is better integrated and those who are fluent in the language may
   expect both less unemployment and higher wage. However, men at
@@ -215,8 +244,18 @@ In the Discussion and Concluding Remarks section they state that
   paper as it did not feel fully fleshed out in the results section
   how this was observed. Tying this to the results would be helpful
   and make it clearer exactly where these results come from.
+
+  \begin{response}
+    We have completely re-phrased this paragraph and rely more on our
+    results (and literature) now.
+  \end{response}
+
 \item In Table 3 I am perplexed how the number of observations increases as more restrictions are added to the model. How could running the same model but including additional workplace controls increase the observations from 7978 to 8233 for men and 9697 to 9895 for women? It makes me somewhat cautious of the results—though it could just be a typo. Could the models be run using the same sample for each column?
-\debug{These typos got fixed.}
+
+  \begin{response}
+    These were typos in the text.  Fixed now.
+  \end{response}
+
 \end{enumerate}
 
 \subsubsection*{6. Quality of Communication}
@@ -238,15 +277,29 @@ In the Discussion and Concluding Remarks section they state that
     45-50 The whole paragraph feels a little awkward. 
   \item I also do not know
     what “cv.ee” means.
-    \debug{SKB: We should set a link or further explanations}
   \end{enumerate}
+
+  \begin{response}
+    We have corrected these (and many more) errors.  cv.ee refers to
+    an online job portal, however, we removed the discussion of
+    it from the text.
+  \end{response}
+
 \item pg 13 ln 35. “However too little results are
   statistically significant.” Does this imply that they model is not
   useful/good? A little more explanation would be helpful.
-  \debug{SR: For more explanations I reestimated Model2 for unemployment for the age groups.
-I made new folder in dropbox:Tabels4\_5. Here are Estimates for the age groups for 4 sub-periods, for time period 2000-2012 and for time period 1989-2012. I also made some changes in the text.}
-\debug{SKB: I did not find the tables. Where exactly did you put them? Did you include them in the text as well?}
-\item pg 15 ln 60(?) “, but not precisely estimated.” More explanation on what you mean here would be helpful.
+
+  \begin{response}
+    This is mainly due to the small groups after splitting the sample
+    into 12 subgroups.  We added a small explanation in the text.
+  \end{response}
+
+\item pg 15 ln 60(?) “, but not precisely estimated.” More explanation
+  on what you mean here would be helpful.
+
+  \begin{response}
+    We refer to large standard errors.  Changed in text.
+  \end{response}
 \end{enumerate}
 
 
