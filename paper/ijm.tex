@@ -65,8 +65,8 @@
 \newcommand{\modelTwo}{age, age\textsuperscript{2}, education, marriage, number of children, inter-ethnic household}
 \newcommand{\modelThree}{\modelTwo, industry, occupation, ownership type of company, number of workers in company, working in the public sector, experience in company}
 \newcommand{\modelThreeAdd}{industry, occupation, ownership type of company, number of workers in company, working in the public sector, experience in company}	
-\newcommand{\restrictions}{The sample period is from year 2000 to year 2012. Sample is limited to persons
-	25-55 year old.}
+\newcommand{\restrictions}{Only years 2000--2012 and individuals 25-55
+  year old included in the sample.}
 \newcommand{\agerestrictions}{25-55 year olds only.}
 % Modified section numbering: removed dot at the end as this jumps
 % into the cross-references.
@@ -339,14 +339,13 @@ steadily getting better in Estonian.
 The Estonian economy, a part of the Soviet economy up to 1991, successfully
 re-oriented to the Western markets and has been growing rapidly since
 the mid-1990s.  \Cref{fig:gdp_growth} indicates that the Estonian economy grew around 7\% per year before the financial crisis in 2008 and after that grew at a lower rate around 3\% per year.
-\fxwarning{ot: a few numbers about economic growth would be good}
-\fxwarning{SKB: I added rather a figure. Pure numbers or table might not give the best impression of the growth.}
 \begin{figure}[h]
 	\centering
-	\caption{GDP growth per year for Estonia}\label{fig:gdp_growth}
+	\caption{Annual GDP growth in Estonia}\label{fig:gdp_growth}
 	\includegraphics[width=0.6\linewidth]{gdp_growth_per_year.eps}
 	\caption*{Source: Worldbank - World Development Indicators, Series  NY.GDP.MKTP.KD.ZG}
 \end{figure}
+\fxnote{ot: remove the cryptic series?}
   As
 a bi-product of the re-adjustment, English skills become extremely
 valuable while the supply was still rather limited during the early
@@ -496,20 +495,22 @@ ability.
 		\# Observations             & 14,943 & 57,270 & 46,525 & 25,688 & 13,805 & 12,830 & 21,773 & 4,862  \\ \bottomrule
 	\end{tabular}%
 	\label{tab:descriptive}%
-	\caption*{\small
-		Workplace--related variables are reported for employed individuals,
-		other variables for the complete workforce.  Sample is limited to persons
-		25-55 year old.\\
-		\emph{RUS 0} refers to individuals who cannot speak Russian and
-		\emph{RUS 1} to those who can. Analogously for English
-                (ENG) and
-		Estonian (EST).\\
-		Primary sector = Agriculture,
-		Fishing, Mining \\ Secondary sector = Manufacturing,
-		Construction, Electricity \\ Tertiary (service) sector =
-		Wholesale, Hotels, Transport, Financial intermediation, Real
-		estate \\ Public sector = Public administration, Education,
-		Health}
+        \newgeometry{textwidth=0.75\paperheight}
+        \begin{flushleft}
+          \small Workplace--related variables are reported for
+          employed individuals, other variables for the complete
+          workforce.  Sample is limited to persons
+          25-55 year old.\\
+          \emph{RUS 0} refers to individuals who cannot speak
+          Russian and \emph{RUS 1} to those who can. Analogously for
+          English (ENG) and
+          Estonian (EST).\\
+          Primary sector = Agriculture, Fishing, Mining; Secondary
+          sector = Manufacturing, Construction, Electricity;
+          Tertiary (service) sector = Wholesale, Hotels, Transport,
+          Financial intermediation, Real estate; Public sector =
+          Public administration, Education, Health
+        \end{flushleft}
 \end{sidewaystable}%
 
 The language fluency variables clearly show that ethnic identity is
@@ -617,7 +618,7 @@ virtually unchanged while for women the estimate falls by 30\%, from
 
 \begin{table}[h]
 	\begin{center}
-		\caption{Estimation results for unemployment.}
+		\caption{Estimation results for unemployment probability.}
 		\label{tab:unemployment_estimation_by_sex_and_ethnic_same_sample} %SKB 04.07.2018 14:22:Not yet updated only prepared
 		\begin{tabular}{l D{.}{.}{3} @{\qquad} D{.}{.}{3} @{\qquad\qquad}
 				D{.}{.}{3} @{\qquad} D{.}{.}{3}}
@@ -642,7 +643,7 @@ virtually unchanged while for women the estimate falls by 30\%, from
 			\bottomrule
 		\end{tabular}%
 		\begin{flushleft}
-			\caption*{ \legend \\ Standard errors (clustered on individuals) in parentheses.\\  Individual characteristics are \modelTwo. \\ \restrictions}
+                  \legend \\ Standard errors (clustered on individuals) in parentheses.\\  Individual characteristics are \modelTwo. \\ \restrictions
 		\end{flushleft}
 	\end{center}
 
@@ -725,7 +726,7 @@ language skill premium is collected through workplace mobility.
 			workplace charact. &                            &                            & \V                                 &                            &                            & \V                         \\ \bottomrule
 		\end{tabular}
 		\begin{flushleft}
-			\caption*{\legend \\ Standard errors (clustered on individuals) in parenthesis \\ Individual characteristics are \modelTwo. \\ Workplace characteristics are \modelThreeAdd. \\ \restrictions}
+                  \legend \\ Standard errors (clustered on individuals) in parenthesis \\ Individual characteristics are \modelTwo. \\ Workplace characteristics are \modelThreeAdd. \\ \restrictions
 		\end{flushleft}
 	\end{center}
 \end{table}
@@ -902,7 +903,7 @@ cause is the increasing abundance of these skills over time.
 
 \begin{table}[htbp]
 	\centering
-	\caption{The trend over time across the age groups (ethnic Estonians)}
+	\caption{Estimated trend over time across the age groups}
 	\begin{tabular}{lccc|cc c}
           \toprule
 		\multicolumn{7}{l}{Estonian speakers. Dependent variable: log wage}          \\ \hline
@@ -950,8 +951,12 @@ cause is the increasing abundance of these skills over time.
 		           & (0.056) & (0.057)  & (0.072) & (0.049) & (0.050) & (0.055)  \\
 		\bottomrule
 	\end{tabular}
-
-	\caption*{\legend \\ Standard errors (clustered on individuals) in parenthesis}
+        \begin{flushleft}
+          \legend \\ Standard errors (clustered on individuals) in
+          parenthesis \\
+          Individual characteristics are \modelTwo. \\
+          \restrictions
+        \end{flushleft}
 	\label{tab:age_group_trend}
 \end{table}
 
@@ -1058,7 +1063,7 @@ the need of communication.
 		\bottomrule
 	\end{tabular}
 	\begin{flushleft}
-		Note: percentage of respondents who respond affirmatively
+		Note: percentage of respondents (Russian speakers) who respond affirmatively
 	\end{flushleft}
 \end{table}
 
