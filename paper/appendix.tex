@@ -76,27 +76,79 @@
 
 \subsubsection{Dependent Variable: Unemployment}
 \label{sec:unemployment_full}
+\begin{sidewaystable}
+	
+
+\begin{tabular}{l*{2}{c}| *{2}{c}| *{2}{c}| *{2}{c}}
+			\toprule
+	& \multicolumn{2}{c|}{Estonian Men} & \multicolumn{2}{c|}{Estonian Women} & \multicolumn{2}{c|}{Russian Men} & \multicolumn{2}{c}{Russian Women} \\ \midrule
+
+	
+	&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c|}{Model 2}&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c|}{Model 2}&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c|}{Model 2}&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c}{Model 2}\\
+	\midrule
+	fluent in Russian   &      -0.026\sym{***}&      -0.010         &      -0.009         &       0.010\sym{*}  &                     &                     &                     &                     \\
+
+	&     (0.006)         &     (0.006)         &     (0.005)         &     (0.005)         &                     &                     &                     &                     \\		fluent in Estonian  &                     &                     &                     &                     &      -0.052\sym{***}&      -0.052\sym{***}&      -0.065\sym{***}&      -0.045\sym{***}\\
+		&                     &                     &                     &                     &     (0.010)         &     (0.011)         &     (0.009)         &     (0.010)         \\
+	fluent in English   &      -0.047\sym{***}&      -0.019\sym{***}&      -0.024\sym{***}&      -0.008         &      -0.020         &       0.006         &      -0.015         &      -0.003         \\
+	&     (0.004)         &     (0.005)         &     (0.004)         &     (0.004)         &     (0.012)         &     (0.014)         &     (0.011)         &     (0.012)         \\
+	age                 &                     &       0.001         &                     &      -0.017\sym{***}&                     &       0.004         &                     &      -0.004         \\
+	&                     &     (0.003)         &                     &     (0.003)         &                     &     (0.006)         &                     &     (0.006)         \\
+	age\sym{2}    &                     &       0.000         &                     &       0.000\sym{***}&                     &      -0.000         &                     &       0.000         \\
+	&                     &     (0.000)         &                     &     (0.000)         &                     &     (0.000)         &                     &     (0.000)         \\
+	<=basic             &                     &       0.061\sym{***}&                     &       0.068\sym{***}&                     &       0.053\sym{***}&                     &       0.097\sym{***}\\
+	&                     &     (0.007)         &                     &     (0.009)         &                     &     (0.015)         &                     &     (0.020)         \\
+	college             &                     &      -0.028\sym{***}&                     &      -0.036\sym{***}&                     &      -0.053\sym{***}&                     &      -0.032\sym{**} \\
+	&                     &     (0.005)         &                     &     (0.004)         &                     &     (0.012)         &                     &     (0.011)         \\
+	Married             &                     &      -0.054\sym{***}&                     &      -0.023\sym{***}&                     &      -0.118\sym{***}&                     &      -0.045\sym{***}\\
+	&                     &     (0.005)         &                     &     (0.004)         &                     &     (0.012)         &                     &     (0.009)         \\
+	Number of Children  &                     &      -0.008\sym{***}&                     &       0.014\sym{***}&                     &      -0.002         &                     &       0.018\sym{**} \\
+	&                     &     (0.002)         &                     &     (0.002)         &                     &     (0.006)         &                     &     (0.007)         \\
+	Harju county \& Tallinn&                     &       0.045\sym{***}&                     &       0.060\sym{***}&                     &       0.118\sym{**} &                     &       0.094\sym{*}  \\
+	&                     &     (0.013)         &                     &     (0.013)         &                     &     (0.039)         &                     &     (0.048)         \\
+	Ida-Viru county   &                     &       0.084\sym{***}&                     &       0.091\sym{***}&                     &       0.131\sym{***}&                     &       0.129\sym{**} \\
+	&                     &     (0.020)         &                     &     (0.020)         &                     &     (0.039)         &                     &     (0.048)         \\
+	Rest of Estonia   &                     &       0.065\sym{***}&                     &       0.081\sym{***}&                     &       0.143\sym{***}&                     &       0.079         \\
+	&                     &     (0.013)         &                     &     (0.013)         &                     &     (0.041)         &                     &     (0.048)         \\
+	Interethnic Household&                     &       0.039\sym{***}&                     &       0.020         &                     &      -0.014         &                     &       0.001         \\
+	&                     &     (0.012)         &                     &     (0.011)         &                     &     (0.015)         &                     &     (0.013)         \\
+
+
+	Constant            &       0.163\sym{***}&       0.072         &       0.106\sym{***}&       0.357\sym{***}&       0.203\sym{***}&       0.067         &       0.225\sym{***}&       0.221         \\
+	&     (0.009)         &     (0.057)         &     (0.007)         &     (0.054)         &     (0.013)         &     (0.118)         &     (0.014)         &     (0.126)         \\
+	year dummies        &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+	\midrule
+	Observations        &       36160         &       36132         &       36050         &       36015         &       12946         &       12942         &       13689         &       13674         \\
+	Adjusted \(R^{2}\)  &       0.022         &       0.047         &       0.012         &       0.035         &       0.032         &       0.065         &       0.022         &       0.041         \\
+	\bottomrule
+	\multicolumn{9}{l}{\footnotesize Standard errors in parentheses}\\
+	\multicolumn{9}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}
+\end{tabular}
+\end{sidewaystable}
+\clearpage
 
 \subsubsection{Dependent Variable: Log Wage}
 \label{sec:wage_full}
 
-{
-	\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
 	\begin{longtable}{l*{3}{c}|l*{3}{c}}
 %		\caption{Estimation results for log wage: all coefficients}
 		\toprule
-		& \multicolumn{3}{c}{Estonian Men} & \multicolumn{3}{c}{Estonian Women} \\
-				&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c}{Model 2}&\multicolumn{1}{c}{Model 3}&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c}{Model 2}&\multicolumn{1}{c}{Model 3}\\
+		& \multicolumn{3}{c|}{Estonian Men} & \multicolumn{3}{c}{Estonian Women} \\
+				&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c}{Model 2}&\multicolumn{1}{c|}{Model 3}&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c}{Model 2}&\multicolumn{1}{c}{Model 3}\\ 
+				\midrule
 		\endfirsthead
-				& \multicolumn{3}{c}{Estonian Men} & \multicolumn{3}{c}{Estonian Women} \\
-		&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c}{Model 2}&\multicolumn{1}{c}{Model 3}&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c}{Model 2}&\multicolumn{1}{c}{Model 3}\\
+		\toprule
+				& \multicolumn{3}{c|}{Estonian Men} & \multicolumn{3}{c}{Estonian Women} \\
+		&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c}{Model 2}&\multicolumn{1}{c|}{Model 3}&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c}{Model 2}&\multicolumn{1}{c}{Model 3}\\
 		\midrule
 		\endhead
 		\midrule
 		\endfoot
+		\bottomrule
 		\endlastfoot
 %		&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c}{Model 2}&\multicolumn{1}{c}{Model 3}&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c}{Model 2}&\multicolumn{1}{c}{Model 3}\\
-		\midrule
+%		\midrule
 		fluent in Russian   &       0.107\sym{***}&       0.072\sym{***}&       0.044\sym{**} &       0.096\sym{***}&       0.041\sym{***}&       0.016         \\
 		&     (0.015)         &     (0.015)         &     (0.013)         &     (0.011)         &     (0.011)         &     (0.009)         \\
 		fluent in English   &       0.343\sym{***}&       0.162\sym{***}&       0.108\sym{***}&       0.311\sym{***}&       0.131\sym{***}&       0.075\sym{***}\\
@@ -120,7 +172,7 @@
 		&                     &     (0.084)         &     (0.104)         &                     &     (0.109)         &     (0.132)         \\
 		Rest of Estonia&                     &      -0.858\sym{***}&      -0.680\sym{***}&                     &      -1.216\sym{***}&      -1.263\sym{***}\\
 		&                     &     (0.078)         &     (0.100)         &                     &     (0.105)         &     (0.130)         \\
-		interEthHH        &                     &      -0.047\sym{*}  &      -0.054\sym{*}  &                     &      -0.064\sym{**} &      -0.047\sym{*}  \\
+		Interethnic Household        &                     &      -0.047\sym{*}  &      -0.054\sym{*}  &                     &      -0.064\sym{**} &      -0.047\sym{*}  \\
 		&                     &     (0.023)         &     (0.021)         &                     &     (0.023)         &     (0.020)         \\
 		Industry &&&&&\\
 		B                   &                     &                     &       0.146\sym{*}  &                     &                     &       0.001         \\
@@ -207,28 +259,29 @@
 		Adjusted \(R^{2}\)  &       0.726         &       0.755         &       0.801         &       0.769         &       0.810         &       0.850         \\
 		\bottomrule
 		\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
-		\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+		\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}
           \label{tab:et_wage_full}
 	\end{longtable}
-}
+
 \clearpage
-{
-	\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
 	\begin{longtable}{l*{3}{c}|l*{3}{c}}
 		\toprule
-				& \multicolumn{3}{c}{Russian Men} & \multicolumn{3}{c}{Russian Women} \\
-				&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c}{Model 2}&\multicolumn{1}{c}{Model 3}&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c}{Model 2}&\multicolumn{1}{c}{Model 3}\\
+				& \multicolumn{3}{c|}{Russian Men} & \multicolumn{3}{c}{Russian Women} \\
+				&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c}{Model 2}&\multicolumn{1}{c|}{Model 3}&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c}{Model 2}&\multicolumn{1}{c}{Model 3}\\
+						\midrule
 		\endfirsthead
-%		\midrule
-						& \multicolumn{3}{c}{Russian Men} & \multicolumn{3}{c}{Russian Women} \\
-				&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c}{Model 2}&\multicolumn{1}{c}{Model 3}&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c}{Model 2}&\multicolumn{1}{c}{Model 3}\\
+		\toprule
+						& \multicolumn{3}{c|}{Russian Men} & \multicolumn{3}{c}{Russian Women} \\
+				&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c}{Model 2}&\multicolumn{1}{c|}{Model 3}&\multicolumn{1}{c}{Model 1}&\multicolumn{1}{c}{Model 2}&\multicolumn{1}{c}{Model 3}\\
+						\midrule
 		\endhead
 		\midrule
 		\endfoot
-		\midrule
+		\bottomrule
 		\endlastfoot
 
-		\midrule
+
 		fluent in Estonian  &       0.018         &      -0.014         &      -0.009         &       0.167\sym{***}&       0.114\sym{***}&       0.066\sym{***}\\
 		&     (0.018)         &     (0.019)         &     (0.018)         &     (0.014)         &     (0.014)         &     (0.013)         \\
 		fluent in English   &       0.249\sym{***}&       0.155\sym{***}&       0.103\sym{***}&       0.223\sym{***}&       0.089\sym{***}&       0.054\sym{**} \\
@@ -244,7 +297,7 @@
 		&                     &     (0.027)         &     (0.026)         &                     &     (0.019)         &     (0.018)         \\
 		Married           &                     &       0.139\sym{***}&       0.102\sym{***}&                     &      -0.021         &      -0.032\sym{**} \\
 		&                     &     (0.021)         &     (0.018)         &                     &     (0.013)         &     (0.011)         \\
-		kids\_allage         &                     &       0.009         &       0.011         &                     &      -0.007         &      -0.003         \\
+		Number of Children         &                     &       0.009         &       0.011         &                     &      -0.007         &      -0.003         \\
 		&                     &     (0.011)         &     (0.009)         &                     &     (0.009)         &     (0.008)         \\
 		Harju county \& Tallinn&                     &      -0.722\sym{***}&      -0.603\sym{**} &                     &      -1.222\sym{***}&      -1.298\sym{***}\\
 		&                     &     (0.184)         &     (0.216)         &                     &     (0.159)         &     (0.117)         \\
@@ -339,7 +392,7 @@
 		\bottomrule
 		\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
 		\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\),
-          \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+          \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}
           \label{tab:ru_wage_full}
 	\end{longtable}
-}
+
