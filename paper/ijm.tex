@@ -361,8 +361,8 @@ steadily getting better in Estonian.
 The Estonian economy, a part of the Soviet economy up to 1991, successfully
 re-oriented to the Western markets and has been growing rapidly since
 the mid-1990s.  \Cref{fig:gdp_growth} indicates that the Estonian economy grew around 7\% per year before the financial crisis in 2008 and after that grew at a lower rate around 3\% per year.
-\fxwarning{ot: a few numbers about economic growth would be good}
-\fxwarning{SKB: I added rather a figure. Pure numbers or table might not give the best impression of the growth.}
+%\fxwarning{ot: a few numbers about economic growth would be good}
+%\fxwarning{SKB: I added rather a figure. Pure numbers or table might not give the best impression of the growth.}
 \begin{figure}[h]
 	\centering                      
 	\caption{GDP growth per year for Estonia}\label{fig:gdp_growth}
@@ -617,8 +617,6 @@ estimate separate models for each individual year.
 We estimate three models that differ in terms of the number of
 control variables. The first specification only includes the language skills
 and year dummies.  It describes the ``raw'' effect of language skills
-<<<<<<< HEAD
->>>> refs/remotes/origin/master
 substantial time trends in our data.
 The second specification additionally includes individual
 characteristics (age, education) and family descriptors (marital
@@ -678,7 +676,6 @@ virtually unchanged while for women the estimate falls by 30\%, from
 			\caption*{ \legend \\ Standard errors (clustered on individuals) in parentheses.\\  Individual characteristics are \modelTwo. \\ \restrictions}
 		\end{flushleft}
 	\end{center}
-
 \end{table}%
 
 Neither Russian nor English show a comparably strong effect.
@@ -729,7 +726,7 @@ individual performance.  Adding observable workplace characteristics
 lowers the effects further to 0.066, suggesting that part of the
 language skill premium is collected through workplace mobility.
 
-\begin{table}[tbp]
+\begin{table}[htbp]
 	\begin{center}
 		\caption{Estimation results for log wage}
 		\label{tab:wage_estimation_by_sex_and_ethnic_same_sample} %SKB 04.07.2018 14:22:Not yet updated only prepared
@@ -739,7 +736,7 @@ language skill premium is collected through workplace mobility.
 				D{.}{.}{3} @{\qquad} D{.}{.}{3} @{\qquad} D{.}{.}{3}}
 			\toprule
 			&                                   \multicolumn{3}{c}{Men}                                    &                              \multicolumn{3}{c}{Women}                               \\
-			Estonians          & \multicolumn{1}{c}{1}      & \multicolumn{1}{l}{\hspace{12pt}2}      & \multicolumn{1}{l}{\hspace{12pt}3} & \multicolumn{1}{c}{1}      & \multicolumn{1}{l}{\hspace{12pt}2}      & \multicolumn{1}{c}{3}      \\\midrule
+			Estonians          & \multicolumn{1}{c}{\hspace{-12pt}1}      & \multicolumn{1}{l}{\hspace{12pt}2}      & \multicolumn{1}{l}{\hspace{12pt}3} & \multicolumn{1}{c}{\hspace{-12pt}1}      & \multicolumn{1}{l}{\hspace{12pt}2}      & \multicolumn{1}{c}{3}      \\\midrule
 			Russian            & 0.112^{***}                & 0.078^{***}                & 0.043^{***}                        & 0.094^{***}                & 0.039^{***}                & 0.016^{*}                \\
 			                   & (0.015)                    & (0.015)                    & (0.014)                            & (0.011)                    & (0.011)                    & (0.009)                    \\
 			English            & 0.343^{***}                & 0.158^{***}                & 0.108^{***}                        & 0.311^{***}                & 0.130^{***}                & 0.075^{***}                \\
@@ -817,7 +814,7 @@ fluency has been associated with less unemployment for both Russian men and
 women since around year 2000, in 1990s it had little effect.  Russian fluency,
 in contrast, had never had an impact on Estonians' unemployment probability.
 
-\begin{figure}[bt!]
+\begin{figure}[hbt]
 	\centering
 	\subfigure[Non-native languages for men]{
 		\includegraphics[width=0.45\linewidth]{Figure1a.eps}
@@ -851,7 +848,7 @@ the late 1990s on. For women, the picture is mostly similar, just the
 effect of Estonian language seems to be somewhat delayed compared to
 that for men.
 
-\begin{figure}[tb!]
+\begin{figure}[htb]
 	\centering
 	\subfigure[Non-native languages for men]{
 		\includegraphics[width=0.45\linewidth]{Figure2a.eps}
@@ -889,7 +886,6 @@ due to the increasing supply of these skills.
 
 \subsection{Does the Effect Differ by Age?}
 \label{sec:age_groups}
-
 As age is a central determinant how major economic and political
 reforms influence individual fates, 
 we also analyze the time trends by age groups
@@ -986,8 +982,7 @@ cause is the increasing abundance of these skills over time.
 		\bottomrule
 	\end{tabular}
 
-	\caption*{\legend \\ Standard errors (clustered on individuals) in parenthesis. \\ Individual characteristics are \modelTwo. \\
-		}
+	\caption*{\legend \\ Standard errors (clustered on individuals) in parenthesis. \\ Individual characteristics are \modelTwo. 	}
 	\label{tab:age_group_trend}
 \end{table}
 
@@ -1090,7 +1085,7 @@ the need of communication.
 		Need Estonian at work                & 53.0 & 61.9  \\
 		Need English  at work                & 26.5 & 11.9  \\
 		\midrule
-		observations                         & 132  & 134   \\
+		\# Observations                         & 132  & 134   \\
 		\bottomrule
 	\end{tabular}
 	\begin{flushleft}
@@ -1124,7 +1119,7 @@ characteristics, including education and geographic location.
 		                  & \std{0.083} &     & \std{0.067} &     & \std{0.080} &   \\
 		region North-East & -0.527      & *** & -0.473      & *** & 0.022       &   \\
 		                  & \std{0.091} &     & \std{0.074} &     & \std{0.088} &   \\ \midrule
-		\# observations             & 228         &     & 228         &     & 228         &   \\
+		\# Observations             & 228         &     & 228         &     & 228         &   \\
 		$R^{2}$           & 0.2598      &     & 0.2831      &     & 0.108       &   \\ \bottomrule
 	\end{tabular}
 	\begin{flushleft}
