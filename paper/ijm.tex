@@ -382,11 +382,9 @@ section that contains income up to several years back.
 We limit ourselves to men and women in the main working age, between 25 and
 55 years old.  Further, we only analyse
 individuals who are either working or actively looking for a job.
-
 The dataset allows us to control for standard personal
 characteristics and human capital variables, such as age, education
-and family status.  The central variables in this study are the same
-as in \citep{Leping2008}:
+and family status.  We discuss the most important variables below.
 
 In all waves of the survey, respondents are asked about their
 ``ethnic nationality''.  Typically, individuals have a single ethnic
@@ -400,15 +398,12 @@ labor force status (working, unemployed or inactive).
                                                                    
 The survey includes self-reported language skills on languages used at
 home, and all other languages they understand.  The respondents are
-give some guidance in assessing their skills, they can report either
-no knowledge, understanding, speaking, writing, or using the
+given some guidance in assessing their skills, they can report either
+no knowledge, understanding only, speaking but not writing, writing, or using the
 language at home.  We consolidate this information into a dummy variable, equal
 to one if one speaks or writes, or uses that language at
 home, and zero otherwise.  Hence we disregard passive understanding
 only.
-  The reader should keep in mind that while the pre-2000 waves include retrospective income, they do not include retrospective language skills. In this way, the results before
-1995 are partly based on extrapolation, assuming individual language
-skills did not vary before that date.
 
 For further evidence on ethnic and gender segregation at workplace we use data
 from 2008 Integration Monitor Survey.  The survey was conducted by
@@ -426,8 +421,6 @@ the need of communication.
 
 The average wages, language skills and other explanatory variables together with the relative frequencies for the period 2000--2012 are presented in \cref{tab:descriptive}. We report the data separately for ethnic nationalities (Estonians and Russians) and language
 skills (Estonian, Russian and English).
-\fxwarning{OT: can you add variable 'year' in this table?  I know it feels a little weird but is great to show time trends.}
-\fxwarning{SKB: What do you mean with time trends? Which value should a ``year'' variable take? Give me an example, since I don't understand what you want. }
 
 The table indicates that there are substantial disparities between
 Estonians and Russians in wage and unemployment. For instance, the
@@ -496,8 +489,8 @@ ability.
 				Workplace--related variables are reported for employed individuals,
 			other variables for the complete workforce.  Sample is limited to persons
 			25-55 year old.\\
-			\emph{RUS 0} refers to individuals who cannot speak Russian and
-			\emph{RUS 1} to those who can. ;Analogously for   
+			\emph{RUS 0} refers to individuals who do not speak Russian and
+			\emph{RUS 1} to those who do.  Analogously for   
 			English
 			(ENG) and
 			Estonian (EST).\\
@@ -540,7 +533,7 @@ skills than with Russian skills.
 \label{sec:method}
 
 We analyse the relationship between labour market outcomes and language
-skills by ordinary multivariate regression models.
+skills using the ordinary multivariate regression.
 Several related studies use instrumental variables to correct for
 omitted variable bias and measurement errors \citep{Chiswick1995, bleakley+chin2004}.
 We refrain from doing that. Our decision is mainly data driven,
@@ -556,38 +549,32 @@ variables have little influence on the final results.
 We use linear probability models (LPM) to estimate the relationship between
 language skills and unemployment, mainly in order to avoid unnecessary parametric
 assumptions in the corresponding binary choice models.\footnote{The
-	results of corresponding probit models are virtually equal to the LPM results.}
+	results of corresponding probit models are virtually identical to the LPM results.}
 Similarly, we estimate the effect of language skills on wage by
 OLS. 
 
-We describe the outcome of individual $i$ belonging to group $g$ (either Estonian
-or Russian) at year $t$ as
+We describe the outcome (log wage and unemployment status) $y$ of individual $i$ at year $t$ as
 \begin{equation}
 	\label{eq:specification}
 	\begin{split}                                                       
-		y_{it} ^{g} = &\: \alpha^{g}{}' \vec{X}_{it}^{g} + \vec{\beta}^{g}{}' \vec{L}_{it}^{g} +
-		\eta_{i}^{g} +
-		\upsilon_{t} + \epsilon_{it}^{g},                                                                                                                                                          
+		y_{it} = &\: \vec{\alpha}' \vec{X}_{it} + \vec{\beta}{}' \vec{L}_{it} +
+		\eta_{i} +
+		\upsilon_{t} + \epsilon_{it},                                                                                                                                                          
 	\end{split}
 \end{equation}
-where $y$ is the outcome (either unemployment indicator
-or logarithm of net monthly wage), $\vec{X}$ are the other individual
-characteristics; $\vec{L}$ is the vector of
-language skill descriptors, $\eta_{i}^{g}$ is the individual-specific effect, $\upsilon_{t}$ are the year dummies and $\epsilon_{it}^{g}$
+where $\vec{L}$  is the vector of
+language skill descriptors, $\vec{X}$ are the other individual
+characteristics, $\eta_{i}$ is the individual-specific effect, $\upsilon_{t}$ are the year dummies and $\epsilon_{it}$
 is the idiosyncratic error term. 
-%\fxerror{ot: what's the eta term?  do you do random effects?}
-%\fxerror{SKB: Eta should be the individual specific random effect. We cluster the standard errors at the individual level, hence estimate a random-effect model, although not a panel random-effect model.}
-%\fxerror{ot: why does $\upsilon$ have index $g$?}
-%\fxerror{SKB: Should be an error, probably index $g$ was just added to everything.}
 As we use panel data, we cluster the
 standard errors on individuals.  When analysing the long-term time
 trend, we use the same specification (without year fixed effects) to
 estimate separate models for each individual year.
 
-We estimate three models that differ in terms of the number of
+We estimate three models that differ in terms of 
 control variables. The first specification only includes the language skills
-and year dummies.  It describes the ``raw'' effect of language skills
-substantial time trends in our data.
+and year dummies.  It describes the ``raw'' effect of language skills,
+net of strong time trends in our data.
 The second specification additionally includes individual
 characteristics (age, education) and family descriptors (marital
 status, indicator for inter-ethnic marriage, having kids up to 17 years
@@ -596,7 +583,6 @@ Finally, the third specification also adds industry, occupation, and other
 workplace descriptors.
 Note that in case of unemployment probability,
 we only estimate the first two models.
-\fxnote{SKB: Actually, I tried to estimate Model 3 as well for unemployment probability. The language coefficients become insignificant after controlling for industry and occupation. Hence, Estonian language fluency lowers the unemployment probability only if workplace characteristics are ignored. Since nobody questioned this result during review, we should maybe not mention it now. }
 
 
 \section{Results}
@@ -604,15 +590,15 @@ we only estimate the first two models.
 \subsection{Unemployment}
 \label{subsec:basic_model_unemployment}
 
-The central results for unemployment regressions are given in
+The central results for unemployment regressions are presented in
 \cref{tab:unemployment_estimation_by_sex_and_ethnic_same_sample}\footnote{We
   restrict both models to have the same number of observations as
-  requested by a reviewer. The unrestricted table is in the appendix \cref{tab:unemployment_estimation_by_sex_and_ethnic}.}.
+  requested by a reviewer. The unrestricted results are provided in the Appendix (\Cref{tab:unemployment_estimation_by_sex_and_ethnic}).}.
 The
 table clearly indicates that Estonian language skills are associated
 with approximately 5 percentage points lower unemployment for both
-Russian men and women. We also see that the effect is not radically
-influenced by the individual characteristics--for men it is
+Russian men and women. We also see that the effect is not 
+influenced in any major way by the individual characteristics--for men it is
 virtually unchanged while for women the estimate falls by 30\%, from
 6.5 to 4.5 percentage points.
 
@@ -653,15 +639,16 @@ Knowledge of Russian is not associated with less unemployment for
 Estonian men, and is even related to a slightly higher unemployment
 for Estonian women. The latter outcome may be related to omitted
 variable bias, Russian knowledge was widespread in the Soviet era and may
-not have been closely associated with any favourable characteristics,
-but has been increasingly more associated with age  during the period of analysis.
+not have been closely associated with favorable unobserved
+characteristics, however, it has been increasingly associated with age
+through the period of analysis.
 English skills are related to less unemployment both for Estonian men
 and women, but the effect is small.
-For Russians, however, Estonian language skills matter. Those who are
-fluent in that language have approximately 5 percentage point less
-unemployment, the effect changes only a little when controlling for
-individual characteristics.  In contrast, the effect of English
-fluency is close to zero and not statistically significant.  As in
+For Russians, the most important language is clearly Estonian.  Those who are
+fluent in that language are approximately 5 percentage point less likely
+unemployed, the effect changes only a little when introducing the
+individual controls.  In contrast, the effect of English
+is close to zero and not statistically significant.  As in
 case of Estonian, individual characteristics change the estimates only
 a little.
 
@@ -683,7 +670,7 @@ results.\footnote{As above, we
 The table
 confirms the descriptive evidence that wage is positively associated
 with fluency of all analyzed languages with English showing the
-largest effect.  The only remarkable exception is
+largest effect.  The only exception is
 Estonian language for Russian men where we fail to find any positive
 effect for any of the specifications.  This qualitatively repeats the results of
 \citet{Toomet2011}. However, for women we observe a sizeable
@@ -694,7 +681,7 @@ into the model, suggesting that the premium
 is partly caused by education and potentially also by unobserved
 individual performance.  Adding observable workplace characteristics
 lowers the effects further to 0.066, suggesting that part of the
-language skill premium is collected through workplace mobility.
+language skill premium is realized through workplace selection.
 
 \begin{table}[htbp]
 	\begin{center}
@@ -732,23 +719,22 @@ language skill premium is collected through workplace mobility.
 
 We also see that knowledge of Russian language is associated with a
 substantial income premium of 10\% for both Estonian men and women.
-The effect falls rapidly when introducing
-individual and workplace controls, suggesting that both ability bias
+Individual and workplace controls lower this figure substantially
+implying that both ability bias
 and workplace mobility play a role.
 
 English language is associated with a very large
-wage premium, up to 34 log points (model 1 for
-Estonian men). It falls substantially when introducing the
+wage premium, up to 34 log points, for all the analyzed groups.  The number falls substantially when introducing the
 individual characteristics into the model (model 2), additional
-workplace characteristics have little effect.  However, in all
-specifications it is
-significantly more
+workplace characteristics have less effect.  However, in all
+specifications it remains
+noticeably more
 important than Russian for Estonians. The estimates are rather
 similar for Estonian and Russian men but little lower for Russian
 women than for Estonian women.
 
-In conclusion, the wage regressions suggest that English is the main
-language that matters for men.  The effect of Russian is minor and
+In conclusion, the wage regressions suggest that English is the
+language most closely associated with income for men.  The effect of Russian is minor and
 that of Estonian non-existent.  For women, all three languages are
 associated with higher wage but Russian to a smaller extent.
 This is in a stark contrast to the unemployment regressions and we return to
@@ -764,6 +750,10 @@ this question in the discussion below.
 As Estonian economy went through turbulent times and rapid changes
 during the 1990s, additional evidence can be gained by a long-term
 trends in the estimated effect size.  Here we look at the yearly estimates from 1992 to 2012.
+The reader should keep in mind that while the pre-2000 waves include retrospective income, they do not include retrospective language skills. In this way, the results before
+1995 are partly based on extrapolation, assuming individual language
+skills did not vary before that date.
+
 We report the results for model 2, i.e. models that include year
 dummies and individual controls, but not workplace
 characteristics.\footnote{The results for models with workplace data (model
@@ -885,7 +875,7 @@ English skills.
 Now we turn to ethnic Russians (lower panel in the table).  The association between Estonian skills and income shows no
 statistically significant results at all.  This is the most unexpected
 result in our analysis and we'll return to this
-below in section~\ref{sec:segregation_analysis}.
+below in section~\ref{sec:segregation-analysis}.
 The impact of Estonian language skills for Russian women too, but
 since year 2000, we observe a sizable effect of approximately
 10\% for several cases.  However, standard errors are large and we
