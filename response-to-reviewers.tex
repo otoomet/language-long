@@ -12,7 +12,8 @@
             linkcolor=blue,
             urlcolor=black,
             ]{hyperref}
-\usepackage[top=15mm, bottom=15mm, left=10mm, textwidth=130mm, marginparwidth=70mm]{geometry}
+\usepackage[top=15mm, bottom=25mm, left=10mm, textwidth=130mm,
+marginparwidth=70mm]{geometry}
 \usepackage{graphicx}
 \usepackage{icomma}
 \usepackage[utf8]{inputenc}
@@ -37,11 +38,6 @@
 {\slshape}{}
 
 \begin{document}
-	\section*{General remarks} % which are too long for the margin... .
-\begin{itemize}
-	\item A rather general remark, I added the occupation variable to the estimations, but did not redo the graphs or tables. The results should not differ much. It will show up in the tables with all coefficients.
-\item SKB: The column separating lines in Table 4 have some \enquote{holes}. We might have to switch from the dcolumn package to the siunitx package to fix these issues. I did not manage yet fix these issues. The referees did not complain, but it still looks ugly or strange. 
-\end{itemize}
 \section*{Response to the referees}
 
 \section{Comments by the editor}
@@ -49,7 +45,13 @@
 \begin{enumerate}
 \item In addition, please elaborate further the comparison of your
   results with respect to the previous literature about the role of
-  language in Baltic, CEE, and former Soviet Union countries. 
+  language in Baltic, CEE, and former Soviet Union countries.
+
+  \begin{response}
+    We have added some more references about CEE economies.  This
+    literature is now discussed in introduction and our outcomes are
+    benchmarked against some of the CEE literature in the discussion. 
+  \end{response}
 \item 
 In revising your paper, please make an effort to keep within the
 journal's word-length norm of 7500 words (including references, notes
@@ -58,7 +60,6 @@ references to 50 items.
 
 \debug{nothing else but 7500 words/50 items.}
 \item When submitting your revised manuscript, you will be able to respond to the comments made by the referee(s) in the space provided.  You can use this space to document any changes you make to the original manuscript.  In order to expedite the processing of the revised manuscript, please be as specific as possible in your response to the referee(s).
-\end{enumerate}
 
 \begin{response}
   At a reviewers request, we have added the full regression tables in
@@ -66,6 +67,8 @@ references to 50 items.
   light of the striving toward the replicable research in the recent
   years, but we think they fit better in an online supplement.
 \end{response}
+
+\end{enumerate}
 
 \section{Referee 1}
 
@@ -91,6 +94,7 @@ references to 50 items.
   \begin{response}
     No response needed here.
   \end{response}
+
 \item 
   My main concern is with some of their wage results. I find it
   puzzling that they don’t find a wage premium for Russian men who
@@ -111,14 +115,15 @@ references to 50 items.
     This is a good point.  We have added some more analysis (see
     Section 7), and it appears the story is somewhat more nuanced.
   \end{response}
-\item
-  \debug{OT: I'll do a rewrite after changes are made, hope it's
-    sufficient.} 
-  The paper needs to be checked for spelling and grammar
+\item The paper needs to be checked for spelling and grammar
   errors. There are a number of typos and errors, which should be
   corrected in a revision. This would normally be a minor comment, but
   here the authors should take this comment very serious as there are
   so many mistakes.
+
+  \begin{response}
+    We have done a thorough proofreading and improved the language. 
+  \end{response}
 \end{enumerate}
 
 \subsection{Minor comments:}
@@ -132,8 +137,6 @@ references to 50 items.
   \begin{response}
     We have improved and simplified the description of the model and related variables.
   \end{response}
-  \fxwarning{ot: should you cluster if you do random effects?}
-  \fxwarning{SKB: What do you mean? As far as I understand clustered standard errors, they introduce a random effect into the estimation, but should not be completely equivalent in our case, because we do not have a typical panel structure.}
 \item - The tables and figures should have notes that explain in more
   detail what is shown in the respective table and figure. For
   instance, the table notes should contain the included control
@@ -172,8 +175,6 @@ is included in your sample.
   \begin{response}
     We have added the full wage results in Appendix.  We think these
     tables would be more suitable for an online supplement.
-    \fxerror{ot: if we do wage, we should also do unemployment}
-    \fxerror{skb: now both are available}
   \end{response}
 \item All tables: Be consistent in the description of your tables. The
 table notes and the labels for e.g., "observations", are inconsistent
@@ -303,6 +304,5 @@ across the different tables.
     We refer to large standard errors.  Changed in text.
   \end{response}
 \end{enumerate}
-
 
 \end{document}
