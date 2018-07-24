@@ -1,7 +1,7 @@
 %\documentclass[10pt,a4paper,english]{article}
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL ijm - Old original.tex   Tue Jul 24 00:56:13 2018
-%DIF ADD ijm.tex                  Tue Jul 24 02:31:48 2018
+%DIF ADD ijm.tex                  Tue Jul 24 20:10:28 2018
 \documentclass[12pt, a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -41,7 +41,7 @@
 %DIF <  \usepackage[author=, status=draft]{fixme}
 %DIF -------
 \usepackage[layout=margin,author=,status=draft]{fixme} %DIF > 
- \usepackage[final]{changes} %Manually track changes %DIF > 
+ \usepackage[draft, addedmarkup=uwave, deleltedmarkup=sout]{changes} %Manually track changes %DIF > 
  \definechangesauthor{SKB} %DIF > 
 %DIF -------
 \usepackage{longtable}
@@ -222,7 +222,7 @@ is the sole official language}\DIFdelend .
  \\
  \textbf{Findings --} \DIFdelbegin \DIFdel{For men, fluency in Estonian is
  related to approximately 5 percentage points lower unemployment, but to virtually no income
-premium. English skills are associated with a
+premium. English skillsare associated with a
 substantial income premium , but are virtually unrelated to
 unemployment. Russian skills are related to higher wages for Estonians, but the premium is falling over time and Russian is not associated with lower unemployment}\DIFdelend \DIFaddbegin \DIFadd{Estonian language knowledge (for ethnic Russians)
  are important determinants of unemployment. Wage, in contrary, is
@@ -306,9 +306,10 @@ that English is a significant predictor of better income
 
 %DIFDELCMD < %%%
 \DIFdelend \DIFaddbegin \citep{Lang2009, Casale2011, Toomet2011, Williams2011, azam+2013EDandCC, isphording2013, fabo+2017E}\DIFadd{.
-}\DIFaddend The role of other languages\DIFaddbegin \DIFadd{, in particular in multi-lingual economy, }\DIFaddend is
-less clear. \DIFdelbegin \DIFdel{It is especially unclear what is the role of
-different languages in a multi-lingual economy.  }\DIFdelend For instance,
+}\DIFaddend The role of other languages\DIFdelbegin \DIFdel{is
+less clear.  It is especially unclear what is the role of
+different languages in }\DIFdelend \DIFaddbegin \DIFadd{, in particular in }\DIFaddend a multi-lingual economy\DIFaddbegin \DIFadd{, is
+less clear}\DIFaddend . For instance,
 \cite{Drinkwater1997} finds
 a positive effect for Welsh speaking workers in
 Wales \DIFdelbegin \DIFdel{but }\DIFdelend \DIFaddbegin \DIFadd{and \mbox{%DIFAUXCMD
@@ -344,7 +345,7 @@ on labour market performance in \DIFdelbegin \DIFdel{Netherlands}\DIFdelend \DIF
 
 \DIFadd{The literature on Central Eastern Europe (CEE) and former Soviet Union
 countries is rather limited. We know that the different development
-trajectories have led to disparities both favouring Russian-speaking
+trajectories have led to disparities both favouring the Russian-speaking
 minority in Ukraine }\citep{Constant2011} \DIFadd{and hindering them in Estonia
 }\citep{Leping2008}\DIFaddend . \DIFdelbegin \DIFdel{In case of Estonia
 ,
@@ -518,7 +519,7 @@ annually
 before the financial crisis in 2008, afterwards the figure has been around 3\%.
 As a by-product of the re-adjustment, English skills become extremely
 valuable while the supply was still rather limited during the early
-years of transition.
+years of the transition.
 }
 
 \begin{figure}[h]
@@ -532,7 +533,7 @@ years of transition.
 disparities in income and education opportunities
 \DIFdelbegin \DIFdel{emerged
 }\DIFdelend in the early 1990s \citep{Leping2008,
-	lindemann+saar2011Russian2ndGeneration}. The inter-ethnic contacts
+	lindemann+saar2011Russian2ndGeneration}. \DIFdelbegin \DIFdel{The inter-ethnic }\DIFdelend \DIFaddbegin \DIFadd{Inter-ethnic }\DIFaddend contacts
 are largely limited to superficial encounters at work and in public
 space, the \DIFaddbegin \DIFadd{number of }\DIFaddend close private ties remain limited
 \citep{korts2009JofBaltStud}. \DIFdelbegin \DIFdel{Both ethnic groups have only few  are
@@ -727,17 +728,18 @@ ability.
 The language fluency variables clearly show that ethnic identity is
 closely related to language use: more than 99\% of Estonians report
 being fluent in Estonian, the figure for Russians is similar. We
-also see that Estonians are better \DIFdelbegin \DIFdel{in }\DIFdelend \DIFaddbegin \DIFadd{at }\DIFaddend English than Russians and they
+also see that Estonians are better \DIFdelbegin \DIFdel{in }\DIFdelend \DIFaddbegin \DIFadd{at }\DIFaddend English than Russians\DIFaddbegin \DIFadd{, }\DIFaddend and they
 are also better \DIFdelbegin \DIFdel{in }\DIFdelend \DIFaddbegin \DIFadd{at }\DIFaddend Russian than vice versa.
 
 Average age reflects the trend of younger generations
 being more fluent in English and Estonian while older Estonians being
 better in Russian. The family \DIFdelbegin \DIFdel{variables follow }\DIFdelend \DIFaddbegin \DIFadd{status--related variables correspond to }\DIFaddend the
 respective age distribution. Not surprisingly, inter-ethnic
-households include \DIFaddbegin \DIFadd{a }\DIFaddend disproportionally large share of Russian speaking
-Estonians and Estonian speaking Russians.
+households include \DIFaddbegin \DIFadd{a }\DIFaddend disproportionally large share of \DIFdelbegin \DIFdel{Russian speaking
+Estonians and Estonian speaking }\DIFdelend \DIFaddbegin \DIFadd{Russian-speaking
+Estonians and Estonian-speaking }\DIFaddend Russians.
 The average experience follows the same pattern as age.
-Public sector jobs are associated with disproportionally large share of
+Public sector jobs are associated with \DIFaddbegin \DIFadd{a }\DIFaddend disproportionally large share of
 Estonian fluency among Russian workers, probably reflecting the formal
 language requirements and little room for ethnic segregation in that
 sector.
@@ -761,7 +763,7 @@ omitted variable bias and measurement errors \citep{Chiswick1995, bleakley+chin2
 We refrain from doing that. Our decision is mainly \DIFdelbegin \DIFdel{data driven}\DIFdelend \DIFaddbegin \DIFadd{data-driven}\DIFaddend ,
 there are no suitable instruments in our data,\footnote{We run an IV
 	regression using \DIFdelbegin \DIFdel{age--at--immigration }\DIFdelend \DIFaddbegin \DIFadd{age at immigration }\DIFaddend to instrument Estonian skills
-	for those Russians who were in the country at 1990. The results are
+for those Russians who were in the country at 1990. The results are
 	not statistically significant at any conventional level.} but it also facilitates
 comparison with other studies. For instance,
 \citet{azam+2013EDandCC} and \citet{paolo+tansel2015JofDevStud} only
@@ -818,8 +820,8 @@ or log-wage) }\DIFdelend \DIFaddbegin \DIFadd{describe the outcome (log wage and
 	\end{split}
 }\end{equation}
 \DIFadd{where $\vec{L}$ is the vector of
-}\DIFaddend language skill descriptors\DIFdelbegin \DIFdel{; }\DIFdelend \DIFaddbegin \DIFadd{, }\DIFaddend $\vec{X}$ are the other individual
-characteristics, \DIFaddbegin \DIFadd{$\eta_{i}$ is the individual-specific effect, }\DIFaddend $\upsilon_{t}$ are the year dummies and $\epsilon_{it}$
+}\DIFaddend language skill descriptors\DIFdelbegin \DIFdel{; }\DIFdelend \DIFaddbegin \DIFadd{. }\DIFaddend $\vec{X}$ are the other individual
+characteristics\DIFaddbegin \DIFadd{. $\eta_{i}$ is the individual-specific effect}\DIFaddend , $\upsilon_{t}$ are the year dummies and $\epsilon_{it}$
 is the idiosyncratic error term. 
 As we use panel data, we cluster the
 standard errors on individuals. When analysing the \DIFaddbegin \DIFadd{long-term }\DIFaddend time
@@ -914,14 +916,15 @@ virtually unchanged while for women the estimate falls by 30\%\DIFaddbegin \DIFa
 %DIFDELCMD < 
 
 %DIFDELCMD < \end{table}%%%
-
 \DIFdelend \DIFaddbegin \begin{table}[h]
+	\color{Blue}
 	\begin{center}
-		\textcolor{Blue}{
 		\caption{Estimation results for unemployment.}
 		\label{tab:unemployment_estimation_by_sex_and_ethnic_same_sample} %SKB 04.07.2018 14:22:Not yet updated only prepared
+		
 		\begin{tabular}{l D{.}{.}{3} @{\qquad} D{.}{.}{3} @{\qquad\qquad}
 				D{.}{.}{3} @{\qquad} D{.}{.}{3}}
+		
 			\toprule
 			&     \multicolumn{2}{c}{Men}     &    \multicolumn{2}{c}{Women}    \\
 			Estonians:   & \multicolumn{1}{c}{1}   & \multicolumn{1}{l}{\hspace{10pt}2} & \multicolumn{1}{c}{1}   & \multicolumn{1}{c}{2}   \\ \midrule
@@ -941,15 +944,17 @@ virtually unchanged while for women the estimate falls by 30\%\DIFaddbegin \DIFa
 			year dummies  & \V             & \V                 & \V             & \V             \\
 			indiv. charact. &              & \V                 &              & \V             \\
 			\bottomrule
+		
 		\end{tabular}
 		\begin{flushleft}
-			\caption*{ \legend \\ Standard errors (clustered on individuals) in parentheses; \\  Individual characteristics are \modelTwo.  \restrictions }
+			\caption*{ \color{Blue} \legend \\ Standard errors (clustered on individuals) in parentheses; \\  Individual characteristics are \modelTwo.  \restrictions }
 		\end{flushleft}
-	}
+
 	\end{center}
+	
 \end{table}\DIFaddend %
 
-Neither Russian nor English show a comparably strong effect.
+Neither Russian nor English \DIFaddbegin \DIFadd{language skills }\DIFaddend show a comparably strong effect.
 Knowledge of Russian is not associated with less unemployment for
 Estonian men, and is even related to a slightly higher unemployment
 for Estonian women. The latter outcome may be related to omitted
@@ -1051,7 +1056,6 @@ language skill premium is realized through workplace selection}\DIFaddend .
 %DIFDELCMD < %%%
 \DIFdelend \DIFaddbegin \begin{table}[htbp]
 	\begin{center}
-		\textcolor{Blue}{
 		\caption{Estimation results for log wage}
 		\label{tab:wage_estimation_by_sex_and_ethnic_same_sample} %SKB 04.07.2018 14:22:Not yet updated only prepared
 		%Accounting for occupation in model reduced the Estonian coefficient for women drastically (from 0.12 down 0.06)!
@@ -1081,7 +1085,6 @@ language skill premium is realized through workplace selection}\DIFaddend .
 		\begin{flushleft}
 			\caption*{\legend \\ Standard errors (clustered on individuals) in parenthesis; \\ Individual characteristics are \modelTwo.  Workplace characteristics are \modelThreeAdd.  \restrictions}
 		\end{flushleft}
-	}
 	\end{center}
 \end{table}
 \DIFaddend 
@@ -1101,8 +1104,9 @@ and workplace mobility, play a role}\DIFaddend .
 English language \DIFaddbegin \DIFadd{fluency }\DIFaddend is associated with a very large
 wage premium, up to 34 log points\DIFdelbegin \DIFdel{(model 1 for Estonian men). It }\DIFdelend \DIFaddbegin \DIFadd{, for all the analysed groups. The number }\DIFaddend falls substantially when introducing the
 individual characteristics into the model (model 2), additional
-workplace characteristics have \DIFdelbegin \DIFdel{little }\DIFdelend \DIFaddbegin \DIFadd{less }\DIFaddend effect. However, in all specifications it \DIFdelbegin \DIFdel{is
-significantly }\DIFdelend \DIFaddbegin \DIFadd{remains noticeably }\DIFaddend more
+workplace characteristics have \DIFdelbegin \DIFdel{little }\DIFdelend \DIFaddbegin \DIFadd{less }\DIFaddend effect. However, \DIFdelbegin \DIFdel{in all
+specifications it is
+significantly }\DIFdelend \DIFaddbegin \DIFadd{it remains noticeably }\DIFaddend more
 important than Russian for Estonians \DIFaddbegin \DIFadd{in all
 specifications}\DIFaddend . The estimates are rather
 similar for Estonian and Russian men but little lower for Russian
@@ -1124,7 +1128,7 @@ this question in the discussion \DIFaddbegin \DIFadd{below}\DIFaddend .
 \label{sec:long-run}              
 
 \DIFaddbegin \DIFadd{As the Estonian economy went through turbulent times and rapid changes
-during the 1990s, it is instructive to analyse the effect long-term
+during the 1990s, it is instructive to analyse the long-term
 trends in the estimated effect size. }\DIFaddend Here we look at the yearly estimates from 1992 to 2012.
 \DIFdelbegin \DIFdel{We report those for the model 2.}\DIFdelend \DIFaddbegin \DIFadd{The reader should keep in mind that while the pre-2000 waves include retrospective income, they do not include retrospective language skills. In this way, the results before
 1995 are partly based on extrapolation, assuming an individual's language
@@ -1174,10 +1178,10 @@ Figure~\ref{fig:long-run_wage}\DIFdelbegin %DIFDELCMD <
 %DIFDELCMD < %%%
 \DIFdelend \DIFaddbegin \DIFadd{.
 }\DIFaddend The results reveal a few interesting facts. First, the effects are
-relatively stable over time, indicating that neither economic
-environment nor the data quality have changed rapidly. Estonian
-fluency has been associated with less unemployment for both \DIFaddbegin \DIFadd{Russian }\DIFaddend men and
-women since around \DIFaddbegin \DIFadd{the }\DIFaddend year 2000, in \DIFaddbegin \DIFadd{the }\DIFaddend 1990s it had little effect. Russian fluency,
+relatively stable over time, indicating that neither \DIFaddbegin \DIFadd{the }\DIFaddend economic
+environment nor the data quality have changed rapidly. Estonian \DIFaddbegin \DIFadd{language
+}\DIFaddend fluency has been associated with less unemployment for both \DIFaddbegin \DIFadd{Russian }\DIFaddend men and
+women since around \DIFaddbegin \DIFadd{the }\DIFaddend year 2000, in \DIFaddbegin \DIFadd{the }\DIFaddend 1990s it had little effect. Russian \DIFaddbegin \DIFadd{language }\DIFaddend fluency,
 in contrast, had never \DIFaddbegin \DIFadd{had }\DIFaddend an impact on \DIFaddbegin \DIFadd{Estonians' }\DIFaddend unemployment probability.
 
 \DIFaddbegin \begin{figure}[hbt]
@@ -1205,7 +1209,7 @@ in contrast, had never \DIFaddbegin \DIFadd{had }\DIFaddend an impact on \DIFadd
 
 \DIFaddend For Estonian men, fluency in English is associated with less unemployment through the whole
 period of observation whereas fluency in Russian has no effect.
-Only \DIFaddbegin \DIFadd{a }\DIFaddend few of the results are \DIFdelbegin \DIFdel{statistically significant pointwise }\DIFdelend \DIFaddbegin \DIFadd{point wise statistically significant }\DIFaddend though.
+Only \DIFaddbegin \DIFadd{a }\DIFaddend few of the results are \DIFdelbegin \DIFdel{statistically significant pointwise }\DIFdelend \DIFaddbegin \DIFadd{pointwise statistically significant }\DIFaddend though.
 For Estonian women, both languages are associated with less
 unemployment in the 1990s but not later. The picture is different for
 Russians. For men, we cannot see any substantial effect of fluency in English
@@ -1514,9 +1518,9 @@ selective internal migration may play a role.
 %DIF >  latex table generated in R 3.4.4 by xtable 1.8-2 package
 %DIF >  Fri Jul 6 15:59:47 2018
 \begin{table}[ht]
+	\color{Blue}
  \centering
- \textcolor{Blue}{
- \caption{\color{Blue} Average wage and time-trend corrected residual across
+ \caption{\color{Blue}Average wage and time-trend corrected residual across
   location and education groups for Russian men}
  \begin{tabular}{llrrrr}
   \toprule
@@ -1540,7 +1544,6 @@ selective internal migration may play a role.
   degree, \emph{HS} is the high school degree as the highest
   completed education.
  \end{flushleft}
-}
  \label{tab:loc-lang-edu}
 \end{table}
 
@@ -1755,7 +1758,7 @@ that this may not be the case for highly educated workers.
 The ethnic segregation seems to be less of an issue for women.
 Unfortunately, neither \citet{Toomet2011} nor
 \citet{leppik+vihalemm2015JofBaltStud} analyse men and women
-separately. We \DIFdelbegin \DIFdel{suppose that }\DIFdelend \DIFaddbegin \DIFadd{find some evidence that female labor market is less
+separately. We \DIFdelbegin \DIFdel{suppose that }\DIFdelend \DIFaddbegin \DIFadd{find some evidence that female labour market is less
 segregated along ethnic lines, and }\DIFaddend women are more frequently employed in jobs in which they need Estonian
 language more, such as working in a direct contact with customers.
 We also find evidence that over time Estonian is becoming more
@@ -3178,6 +3181,7 @@ Zhou, M.%
 %DIF > Copied from the original table, because it does not have the same number of Observations per model
 \begin{table}[H]
 	\begin{center}
+		\color{Blue}
 		\caption{Estimation results for unemployment.}
 		\label{tab:unemployment_estimation_by_sex_and_ethnic}
 		\begin{tabular}{l D{.}{.}{3} @{\qquad} D{.}{.}{3} @{\qquad\qquad}
@@ -3203,7 +3207,7 @@ Zhou, M.%
 			\bottomrule
 		\end{tabular}%
 		\begin{flushleft}
-			\caption*{ \legend \\ Standard errors (clustered on individuals) in parentheses.\\  Individual characteristics are \modelTwo. \restrictions}
+			\caption*{ \color{Blue} \legend \\ Standard errors (clustered on individuals) in parentheses.\\  Individual characteristics are \modelTwo. \restrictions}
 		\end{flushleft}
 	\end{center}
 
@@ -3211,6 +3215,7 @@ Zhou, M.%
 
 \begin{table}[htbp]
 	\begin{center}
+		\color{Blue}
 		\caption{Estimation results for log wage}
 		\label{tab:wage_estimation_by_sex_and_ethnic} %SKB 04.07.2018 14:22:Not yet updated only prepared
 		%Modified to account for occupation
@@ -3237,7 +3242,7 @@ Zhou, M.%
 			workplace charact. &                            &                            & \V                                 &                            &                            & \V                         \\ \bottomrule
 		\end{tabular}
 		\begin{flushleft}
-			\caption*{\legend \\ Standard errors (clustered on individuals) in parenthesis \\ Individual characteristics are \modelTwo.  Workplace characteristics are \modelThreeAdd.  \restrictions}
+			\caption*{\color{Blue}\legend \\ Standard errors (clustered on individuals) in parenthesis \\ Individual characteristics are \modelTwo.  Workplace characteristics are \modelThreeAdd.  \restrictions}
 		\end{flushleft}
 	\end{center}
 \end{table}
@@ -3568,10 +3573,8 @@ Zhou, M.%
           \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}
           \label{tab:ru_wage_full}
 	\end{longtable}
-
-
-
-%DIF > \listoffixmes
 \DIFaddend 
+
+
 
 \end{document}
