@@ -49,7 +49,7 @@
 %Custom commands
 \newcommand{\eur}{\EUR}
 \newcommand{\std}[1]{\emph{(#1)}}
-\newcommand{\V}{\ensuremath\checkmark}
+\newcommand{\V}{\checkmark}
 \def\fns{\footnotesize}
 \renewcommand*{\vec}[1]{\boldsymbol{#1}}
 
@@ -66,10 +66,7 @@
 \newcommand{\modelTwo}{age, age\textsuperscript{2}, education, marriage, number of children, inter-ethnic household}
 \newcommand{\modelThree}{\modelTwo, industry, occupation, ownership type of company, number of workers in company, working in the public sector, experience in company}
 \newcommand{\modelThreeAdd}{industry, occupation, ownership type of company, number of workers in company, working in the public sector, experience in company}	
-\newcommand{\restrictions}{The sample period is from year 2000 to year 2012. Sample is limited to persons
-	25-55
-     
- year old.}
+\newcommand{\restrictions}{The sample period is from year 2000 to year 2012. Sample is limited to persons 25-55 year old.}
 \newcommand{\agerestrictions}{25-55 year olds only.}
 % Modified section numbering: removed dot at the end as this jumps
 % into the cross-references.
@@ -113,11 +110,11 @@
 %and Internationalisation Program DoRa through Archimedes Foundation, and the Estonian Science Foundation grant 8627.
 %\newpage
 %\noindent
-{\centering \textbf{Language Skills in an Ethnically Segmented Labour market: Estonia 1989 -- 2012}}
+{\centering \textbf{Language Skills in an Ethnically Segmented Labour Market: Estonia 1989 -- 2012}}
 \begin{abstract}
  \noindent
- \textbf{Purpose --} We analyse the relationship between skills of
- Estonian, Russian and English, and labour market
+ \textbf{Purpose --} We analyse the relationship between skills in the
+ Estonian, Russian and English language, and labour market
  outcomes in Estonia, a linguistically divided country.
  \\
  \textbf{Design/methodology/approach --} We use the Estonian Labour
@@ -569,7 +566,7 @@ standard errors on individuals. When analysing the long-term time
 trend, we use the same specification (without year fixed effects) to
 estimate separate models for each individual year.
 
-We estimate three models that differ in terms of the control variables. The first specification only includes the language skills
+We estimate three models that differ in the control variables. The first specification only includes the language skills
 and year dummies. It describes the ``raw'' effect of language skills,
 net of strong time trends in our data.
 The second specification additionally includes individual
@@ -578,7 +575,7 @@ status, an indicator for inter-ethnic marriage, having kids up to 17 years
 old) and county of residence. 
 Finally, the third specification also adds industry, occupation, and other
 workplace descriptors.
-Note that in case of unemployment probability,
+Note that for the unemployment probability,
 we only estimate the first two models.
 
 
@@ -626,7 +623,7 @@ virtually unchanged while for women the estimate falls by 30\%, from
 			\bottomrule
 		\end{tabular}
 		\begin{flushleft}
-			\caption*{ \legend \\ Standard errors (clustered on individuals) in parentheses.\\ Individual characteristics are \modelTwo. \\ \restrictions}
+			\caption*{ \legend \\ Standard errors (clustered on individuals) in parentheses; \\  Individual characteristics are \modelTwo.  \restrictions }
 		\end{flushleft}
 	\end{center}
 \end{table}%
@@ -669,7 +666,7 @@ confirms the descriptive evidence that wage is positively associated
 with fluency in all analysed languages with English showing the
 largest effect. The only exception is
 Estonian language for Russian men where we fail to find any positive
-effect for any of the specifications. This qualitatively repeats the results of
+effect for any of the specifications. This finding qualitatively repeats the results of
 \citet{Toomet2011}. However, for women we observe a sizeable
 positive effect between 6 and 16 percentage points, suggesting that
 \citet{Toomet2011} results are not valid for the female labour market. The effect decreases somewhat
@@ -709,7 +706,7 @@ language skill premium is realized through workplace selection.
 			workplace charact. &              &              & \V                 &              &              & \V             \\ \bottomrule
 		\end{tabular}
 		\begin{flushleft}
-			\caption*{\legend \\ Standard errors (clustered on individuals) in parenthesis \\ Individual characteristics are \modelTwo. \\ Workplace characteristics are \modelThreeAdd. \\ \restrictions}
+			\caption*{\legend \\ Standard errors (clustered on individuals) in parenthesis; \\ Individual characteristics are \modelTwo.  Workplace characteristics are \modelThreeAdd.  \restrictions}
 		\end{flushleft}
 	\end{center}
 \end{table}
@@ -733,7 +730,7 @@ In conclusion, the wage regressions suggest that English is the
 language which is most closely associated with income for men. The effect of Russian language fluency is minor and
 that of Estonian language fluency non-existent. For women, all three languages are
 associated with higher wage but the Russian language to a smaller extent.
-This is in a stark contrast to the unemployment regressions and we return to
+This result is in a stark contrast to the unemployment regressions and we return to
 this question in the discussion below.
 
 
@@ -863,12 +860,12 @@ during the early years of transition but has been very closely
 associated with better pay since 1996. Its importance seems to
 fall for the young and middle male groups while the oldest men
 (45-55) and the youngest women (25-35) show a growing trend.
-This potentially reflects both the changing supply and demand for 
+This result potentially reflects both the changing supply and demand for 
 English.
 
 Now we turn to ethnic Russians (lower panel in the table). The association between Estonian skills and income shows no
 statistically significant results at all. This is the most unexpected
-outcome in our analysis and we'll return to this
+outcome in our analysis, and we'll return to this
 below in Section~\ref{sec:segregation-analysis}.
 The effect of Estonian language skills was initially small for Russian
 women as well, but
@@ -1116,7 +1113,7 @@ However, we find that ethnic segregation is less prevalent in the male
 labour market.
 This suggests for the majority of Russian speaking men, Estonian
 language gives a distinct advantage by facilitating hiring by
-Estonian-dominated employers. But we also confirm
+Estonian-dominated employers. We also confirm
 \citet{leppik+vihalemm2015JofBaltStud} conclusion that
 these
 jobs are associated with little career mobility. There is also some
@@ -1184,6 +1181,6 @@ decrease the measurement error in the future.
 \appendix
 \input{appendix.tex}
 
-\listoffixmes
+%\listoffixmes
 
 \end{document}
