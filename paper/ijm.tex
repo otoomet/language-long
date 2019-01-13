@@ -1,9 +1,8 @@
-%\documentclass[10pt,a4paper,english]{article}
-\documentclass[12pt, a4paper]{article}
+\documentclass[12pt, a4paper,english]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[margin=2.5cm,top=2.5cm, bottom=2.0cm]{geometry}
-\usepackage[english]{babel}
+\usepackage[hmargin=2.5cm,top=2.5cm, bottom=2.0cm]{geometry}
+\usepackage{babel}
 %\usepackage{lmodern}
 \usepackage{newtxtext}
 \usepackage{newtxmath}
@@ -25,34 +24,31 @@
 \usepackage{comment}
 \usepackage{graphicx}
 \usepackage{epstopdf}
-\usepackage[layout=margin,author=,status=draft]{fixme}
- \usepackage[final]{changes} %Manually track changes
- \definechangesauthor{SKB}
 \usepackage{longtable}
 \usepackage{paralist}
 \usepackage{rotating}
 \usepackage{subfigure}
 \usepackage[natbibapa]{apacite}
-%\usepackage[authoryear]{natbib}
+
 \usepackage{csquotes}
 %modifying the thanks commands
 \usepackage{titling}
 \usepackage[colorlinks=true, urlcolor=blue, citecolor=black, linkcolor=black]{hyperref}
 \usepackage[noabbrev,capitalise]{cleveref}
 
-\DeclareUnicodeCharacter{2010}{-}% support older LaTeX versions
+%\DeclareUnicodeCharacter{2010}{-}% support older LaTeX versions
 \thanksfootextra{}{\hfill}
 \setlength{\thanksmargin}{1em}
 \setlength{\thanksmarkwidth}{0.75em}
 
-\fxsetup{theme=color}
+
 %Custom commands
 \newcommand{\eur}{\EUR}
 \newcommand{\std}[1]{\emph{(#1)}}
 \newcommand{\V}{\checkmark}
 \def\fns{\footnotesize}
 \renewcommand*{\vec}[1]{\boldsymbol{#1}}
-
+%\section{Own commands}
 \def\tenpc{$^{\ast}$}
 \def\fivepc{$^{\ast\ast}$}
 \def\onepc{$^{\ast\ast\ast}$}
@@ -61,12 +57,18 @@
 \def\legendTwo{\multicolumn{3}{l}{\footnotesize{Significance levels
 			:\hspace{1em} $\dag$ : 10\% \hspace{1em}
 			$\ast$ : 5\% \hspace{1em} $\ast\ast$ : 1\% \normalsize}}}
-\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi} % needed for the tables produced by the esttab command in Stata, to avoid redundancy put here instead of in appendix.tex, where it is needed		
-%SKB: Added for documenting the tables and figures
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi} 
+%Added for documenting the tables and figures
 \newcommand{\modelTwo}{age, age\textsuperscript{2}, education, marriage, number of children, inter-ethnic household}
 \newcommand{\modelThree}{\modelTwo, industry, occupation, ownership type of company, number of workers in company, working in the public sector, experience in company}
-\newcommand{\industry}{Industry categories (according to NACE Rev.2): A Agriculture, Forestry and Fishing; B Mining and Quarrying; C Manufacturing; D Electricity, Gas, Steam and Air Conditioning Supply; E Water Supply;  Sewerage, Waste Management and Remediation Activities; F Construction; G Wholesale and Retail Trade;  Repair of Motor Vehicles and Motorcycles; H Transportation and Storage; I Accommodation and Food Service Activities; J Information and Communication; K Financial and Insurance Activities; L Real Estate Activities; M Professional, Scientific and Technical Activities; N Administrative and Support Service Activities; O Public Administration and Defence;  Compulsory Social Security; P Education; Q Human Health and Social Work Activities; R Arts, Entertainment and Recreation; S Other Service Activities; T Activities of Households as Employers;  Undifferentiate Goods and Services Producing Activities of Households for Own Use; U Activities of Extraterritorial Organisations and Bodies}
-\newcommand{\occupation}{Occupation categories according to ISCO-08: 1 Managers; 2 Professional; 3 Technicians and associate professionals; 4 Clerical support workers; 5 Service and sales workers; 6 Skilled agricultural, forestry and fishery workers; 7 Craft and related trades workers; 8 Plant and machine operators, and assemblers; 9 Elementary occupations; 10 Armed forces occupations}
+\newcommand{\industry}{Industry categories (according to NACE Rev.2): A Agriculture, Forestry and Fishing; B Mining and Quarrying; C Manufacturing; D Electricity, Gas, Steam and Air Conditioning Supply; E Water Supply;  Sewerage, Waste Management and Remediation Activities; F Construction; G Wholesale and Retail Trade;  Repair of Motor Vehicles and Motorcycles; H Transportation and Storage; I Accommodation and Food Service Activities; J Information and Communication; K Financial and Insurance Activities; L Real Estate Activities; M Professional, Scientific and Technical Activities; N Administrative and Support Service Activities; O Public Administration and Defence;  Compulsory Social Security; P Education; Q Human Health and Social Work Activities; R Arts, Entertainment and Recreation; S Other Service Activities; T Activities of Households as Employers;  Undifferentiate Goods and Services Producing Activities of Households for Own Use; U Activities of Extraterritorial Organisations and Bodies \\ }
+\newcommand{\occupation}{Occupation categories according to ISCO-08: 1 Managers; 2 Professional; 3 Technicians and associate professionals; 4 Clerical support workers; 5 Service and sales workers; 6 Skilled agricultural, forestry and fishery workers; 7 Craft and related trades workers; 8 Plant and machine operators, and assemblers; 9 Elementary occupations; 10 Armed forces occupations \\ }
+\newcommand{\ownership}{Ownership types: 10 -- government (Estonian State);
+	20 -- local government;
+	30 -- private, Estonian;
+	40 -- private, foreign;
+	50 -- private, mixed Estonian and foreign;
+	90 -- other}
 \newcommand{\modelThreeAdd}{industry, occupation, ownership type of company, number of workers in company, working in the public sector, experience in company}	
 \newcommand{\restrictions}{The sample period is from year 2000 to year 2012. Sample is limited to persons 25-55 year old.}
 \newcommand{\agerestrictions}{25-55 year olds only.}
@@ -90,7 +92,7 @@
 %	\textbf{{\large Language Skills in an Ethnically Segmented Labour market:
 %				Estonia 1989 -- 2012}} \\
 %	{\large Sven-Kristjan Bormann} \\
-%	\emph{School of Economics and Business Administration, University of Tartu, Narva mnt. 4, 51007 Tartu, Estonia\\ Tel.: +372 5844 3873\\ Email: \href{mailto:bormann@ut.ee}{bormann@ut.ee}}	\\
+%	\emph{School of Economics and Business Administration, University of Tartu, Liivi. 4, 51007 Tartu, Estonia\\ Tel.: +372 5844 3873\\ Email: \href{mailto:bormann@ut.ee}{bormann@ut.ee}}	\\
 %
 %	{\large Svetlana Ridala} \\
 %	\emph{School of Business and Governance, Tallinn University of Technology, Akadeemia tee 3, 12618 Tallinn, Estonia\\ Email: \href{
@@ -448,9 +450,10 @@ time trends, English skills are
 also related to education, metropolitan residence, and general
 ability.
 
-% Table generated by Excel2LaTeX from sheet 'subgroups_by_ethnic_language'
+
 \begin{sidewaystable}[htbp]
 	\centering
+
 	\caption{Averages and relative frequencies of selected explanatory
 		variables 2000 -- 2012}
 	\begin{tabular}{l|rrrr|rrrr}
@@ -594,14 +597,14 @@ The
 table clearly indicates that Estonian language skills are associated
 with an approximately 5 percentage points lower unemployment for both
 Russian men and women. We also see that the effect is not 
-influenced in any major way by the individual characteristics-- for men it is
+influenced in any major way by the individual characteristics. For men it is
 virtually unchanged while for women the estimate falls by 30\%, from
 6.5 to 4.5 percentage points.
 
 \begin{table}[h]
 	\begin{center}
 		\caption{Estimation results for unemployment.}
-		\label{tab:unemployment_estimation_by_sex_and_ethnic_same_sample} %SKB 04.07.2018 14:22:Not yet updated only prepared
+		\label{tab:unemployment_estimation_by_sex_and_ethnic_same_sample} 
 		\begin{tabular}{l D{.}{.}{3} @{\qquad} D{.}{.}{3} @{\qquad\qquad}
 				D{.}{.}{3} @{\qquad} D{.}{.}{3}}
 			\toprule
@@ -655,7 +658,6 @@ English, these languages are not closely associated with unemployment
 probability. 
 
 \subsection{Wage}
-%SKB: Adding occupation to Model 3 reduces the effects drastically. Beforehand I somehow forgot to add it to the estimation. Now occupation is included as it should have been in the first place.
 \label{subsec:basic_model_wage}
 
 \cref{tab:wage_estimation_by_sex_and_ethnic_same_sample} presents the
@@ -682,9 +684,7 @@ language skill premium is realized through workplace selection.
 \begin{table}[htbp]
 	\begin{center}
 		\caption{Estimation results for log wage}
-		\label{tab:wage_estimation_by_sex_and_ethnic_same_sample} %SKB 04.07.2018 14:22:Not yet updated only prepared
-		%Accounting for occupation in model reduced the Estonian coefficient for women drastically (from 0.12 down 0.06)!
-		%For other groups it is less
+		\label{tab:wage_estimation_by_sex_and_ethnic_same_sample} 
 		\begin{tabular}{l | D{.}{.}{3} @{\qquad} D{.}{.}{3} @{\qquad} D{.}{.}{3} @{\qquad} | @{\qquad}
 				D{.}{.}{3} @{\qquad} D{.}{.}{3} @{\qquad} D{.}{.}{3}}
 			\toprule
@@ -974,8 +974,6 @@ opposite-signed effects in for these two education groups suggests
 that a
 selective internal migration may play a role.
 
-% latex table generated in R 3.4.4 by xtable 1.8-2 package
-% Fri Jul 6 15:59:47 2018
 \begin{table}[ht]
  \centering
  \caption{Average wage and time-trend corrected residual across
